@@ -1,23 +1,78 @@
 {
 	"type": "obj",
 	"nodes": {
-		"hemisphereLight1": {
-			"type": "hemisphereLight",
+		"directionalLight1": {
+			"type": "directionalLight",
+			"params": {
+				"r": [
+					90,
+					0,
+					0
+				],
+				"shadowSize": [
+					8,
+					8
+				],
+				"shadowBias": 0
+			},
+			"inputs": [
+				"polarTransform1"
+			],
 			"flags": {
 				"display": true
 			}
 		},
-		"spotLight1": {
-			"type": "spotLight",
+		"polarTransform1": {
+			"type": "polarTransform",
 			"params": {
-				"t": [
-					2,
-					2,
+				"center": [
+					0,
+					1.1,
 					0
-				]
+				],
+				"longitude": 25.2,
+				"latitude": 14.4,
+				"depth": 3.9
 			},
 			"flags": {
+				"display": false
+			}
+		},
+		"directionalLight2": {
+			"type": "directionalLight",
+			"params": {
+				"r": [
+					90,
+					0,
+					0
+				],
+				"shadowSize": [
+					8,
+					8
+				],
+				"shadowBias": 0
+			},
+			"inputs": [
+				"polarTransform2"
+			],
+			"flags": {
 				"display": true
+			}
+		},
+		"polarTransform2": {
+			"type": "polarTransform",
+			"params": {
+				"center": [
+					0,
+					1.1,
+					0
+				],
+				"longitude": 306,
+				"latitude": 14.4,
+				"depth": 3.9
+			},
+			"flags": {
+				"display": false
 			}
 		}
 	},

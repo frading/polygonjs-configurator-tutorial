@@ -1,0 +1,83 @@
+{
+	"type": "geo",
+	"nodes": {
+		"plane1": {
+			"type": "plane",
+			"params": {
+				"center": [
+					0,
+					0,
+					0.5
+				]
+			}
+		},
+		"transform1": {
+			"type": "transform",
+			"params": {
+				"s": [
+					2.6582128700761567,
+					1,
+					0.8058271122426286
+				],
+				"scale": 3.3
+			},
+			"inputs": [
+				"plane1"
+			]
+		},
+		"plane2": {
+			"type": "plane",
+			"params": {
+				"direction": [
+					0,
+					0,
+					1
+				],
+				"center": [
+					0,
+					0.5,
+					0
+				]
+			}
+		},
+		"transform2": {
+			"type": "transform",
+			"params": {
+				"s": [
+					2.6582128700761567,
+					2.445726049503015,
+					0.8058271122426286
+				],
+				"scale": 3.3
+			},
+			"inputs": [
+				"plane2"
+			]
+		},
+		"merge1": {
+			"type": "merge",
+			"inputs": [
+				"transform1",
+				"transform2"
+			]
+		},
+		"material1": {
+			"type": "material",
+			"params": {
+				"material": "../../MAT/meshStandardBuilder_ROOM"
+			},
+			"inputs": [
+				"merge1"
+			],
+			"flags": {
+				"display": true
+			}
+		}
+	},
+	"flags": {
+		"display": true
+	},
+	"selection": [
+		"transform2"
+	]
+}

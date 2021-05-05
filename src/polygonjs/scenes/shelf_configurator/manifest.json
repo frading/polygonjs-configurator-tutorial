@@ -1,9 +1,13 @@
 {
 	"properties": "1620231729183",
-	"root": "1620233023009",
+	"root": "1620233722005",
 	"nodes": {
-		"geo1": "1620232993226",
-		"perspectiveCamera1": "1620232013440",
-		"perspectiveCamera1/events1": "1620232013440"
+		"perspectiveCamera1": "1620234080729",
+		"perspectiveCamera1/events1": "1620234080729",
+		"shelf": "1620233695044",
+		"room": "1620234080729",
+		"MAT": "1620234080729",
+		"MAT/meshStandardBuilder_ROOM": "1620234080729",
+		"MAT/meshStandardBuilder_SHELF": "1620234080729"
 	}
 }

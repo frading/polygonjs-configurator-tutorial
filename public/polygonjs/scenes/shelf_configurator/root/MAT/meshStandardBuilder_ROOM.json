@@ -1,0 +1,1146 @@
+{
+	"type": "meshStandardBuilder",
+	"nodes": {
+		"globals1": {
+			"type": "globals"
+		},
+		"output1": {
+			"type": "output",
+			"inputs": [
+				null,
+				null,
+				null,
+				{
+					"index": 3,
+					"node": "easing1",
+					"output": "out"
+				}
+			]
+		},
+		"vec3ToFloat1": {
+			"type": "vec3ToFloat",
+			"inputs": [
+				{
+					"index": 0,
+					"node": "globals1",
+					"output": "position"
+				}
+			]
+		},
+		"disk1": {
+			"type": "disk",
+			"params": {
+				"radius": 1.8,
+				"feather": 1
+			},
+			"inputs": [
+				{
+					"index": 0,
+					"node": "twoWaySwitch1",
+					"output": "val"
+				}
+			]
+		},
+		"floatToVec2_1": {
+			"type": "floatToVec2",
+			"inputs": [
+				{
+					"index": 0,
+					"node": "multAdd1",
+					"output": "val"
+				},
+				{
+					"index": 1,
+					"node": "vec3ToFloat1",
+					"output": "z"
+				}
+			]
+		},
+		"multAdd1": {
+			"type": "multAdd",
+			"params": {
+				"value": {
+					"type": "float",
+					"default_value": 0,
+					"options": {
+						"spare": true
+					}
+				},
+				"preAdd": {
+					"type": "float",
+					"default_value": 0,
+					"options": {
+						"spare": true
+					}
+				},
+				"mult": {
+					"type": "float",
+					"default_value": 1,
+					"options": {
+						"spare": true
+					},
+					"raw_input": 0.57
+				},
+				"postAdd": {
+					"type": "float",
+					"default_value": 0,
+					"options": {
+						"spare": true
+					}
+				}
+			},
+			"inputs": [
+				{
+					"index": 0,
+					"node": "vec3ToFloat1",
+					"output": "x"
+				},
+				null,
+				{
+					"index": 2,
+					"node": "constant1",
+					"output": "val"
+				}
+			],
+			"connection_points": {
+				"in": [
+					{
+						"name": "value",
+						"type": "float"
+					},
+					{
+						"name": "preAdd",
+						"type": "float"
+					},
+					{
+						"name": "mult",
+						"type": "float"
+					},
+					{
+						"name": "postAdd",
+						"type": "float"
+					}
+				],
+				"out": [
+					{
+						"name": "val",
+						"type": "float"
+					}
+				]
+			}
+		},
+		"easing1": {
+			"type": "easing",
+			"params": {
+				"type": 19
+			},
+			"inputs": [
+				{
+					"index": 0,
+					"node": "disk1",
+					"output": "float"
+				}
+			]
+		},
+		"vec3ToFloat2": {
+			"type": "vec3ToFloat",
+			"inputs": [
+				{
+					"index": 0,
+					"node": "globals1",
+					"output": "position"
+				}
+			]
+		},
+		"floatToVec2_2": {
+			"type": "floatToVec2",
+			"inputs": [
+				{
+					"index": 0,
+					"node": "multAdd3",
+					"output": "val"
+				},
+				{
+					"index": 1,
+					"node": "multAdd2",
+					"output": "val"
+				}
+			]
+		},
+		"multAdd2": {
+			"type": "multAdd",
+			"params": {
+				"value": {
+					"type": "float",
+					"default_value": 0,
+					"options": {
+						"spare": true
+					}
+				},
+				"preAdd": {
+					"type": "float",
+					"default_value": 0,
+					"options": {
+						"spare": true
+					}
+				},
+				"mult": {
+					"type": "float",
+					"default_value": 1,
+					"options": {
+						"spare": true
+					}
+				},
+				"postAdd": {
+					"type": "float",
+					"default_value": 0,
+					"options": {
+						"spare": true
+					}
+				}
+			},
+			"inputs": [
+				{
+					"index": 0,
+					"node": "vec3ToFloat2",
+					"output": "y"
+				},
+				{
+					"index": 1,
+					"node": "negate1",
+					"output": "val"
+				}
+			],
+			"connection_points": {
+				"in": [
+					{
+						"name": "value",
+						"type": "float"
+					},
+					{
+						"name": "preAdd",
+						"type": "float"
+					},
+					{
+						"name": "mult",
+						"type": "float"
+					},
+					{
+						"name": "postAdd",
+						"type": "float"
+					}
+				],
+				"out": [
+					{
+						"name": "val",
+						"type": "float"
+					}
+				]
+			}
+		},
+		"multAdd3": {
+			"type": "multAdd",
+			"params": {
+				"value": {
+					"type": "float",
+					"default_value": 0,
+					"options": {
+						"spare": true
+					}
+				},
+				"preAdd": {
+					"type": "float",
+					"default_value": 0,
+					"options": {
+						"spare": true
+					}
+				},
+				"mult": {
+					"type": "float",
+					"default_value": 1,
+					"options": {
+						"spare": true
+					}
+				},
+				"postAdd": {
+					"type": "float",
+					"default_value": 0,
+					"options": {
+						"spare": true
+					}
+				}
+			},
+			"inputs": [
+				{
+					"index": 0,
+					"node": "vec3ToFloat2",
+					"output": "x"
+				},
+				null,
+				{
+					"index": 2,
+					"node": "constant1",
+					"output": "val"
+				}
+			],
+			"connection_points": {
+				"in": [
+					{
+						"name": "value",
+						"type": "float"
+					},
+					{
+						"name": "preAdd",
+						"type": "float"
+					},
+					{
+						"name": "mult",
+						"type": "float"
+					},
+					{
+						"name": "postAdd",
+						"type": "float"
+					}
+				],
+				"out": [
+					{
+						"name": "val",
+						"type": "float"
+					}
+				]
+			}
+		},
+		"constant1": {
+			"type": "constant",
+			"params": {
+				"float": 0.57
+			},
+			"maxInputsCount": 0,
+			"connection_points": {
+				"in": [],
+				"out": [
+					{
+						"name": "val",
+						"type": "float"
+					}
+				]
+			}
+		},
+		"constant2": {
+			"type": "constant",
+			"params": {
+				"float": 5.4
+			},
+			"maxInputsCount": 0,
+			"connection_points": {
+				"in": [],
+				"out": [
+					{
+						"name": "val",
+						"type": "float"
+					}
+				]
+			}
+		},
+		"negate1": {
+			"type": "negate",
+			"params": {
+				"in": {
+					"type": "float",
+					"default_value": 0,
+					"options": {
+						"spare": true
+					}
+				}
+			},
+			"inputs": [
+				{
+					"index": 0,
+					"node": "constant2",
+					"output": "val"
+				}
+			],
+			"connection_points": {
+				"in": [
+					{
+						"name": "in",
+						"type": "float"
+					}
+				],
+				"out": [
+					{
+						"name": "val",
+						"type": "float"
+					}
+				]
+			}
+		},
+		"compare1": {
+			"type": "compare",
+			"params": {
+				"test": 1,
+				"value0": {
+					"type": "float",
+					"default_value": 0,
+					"options": {
+						"spare": true
+					}
+				},
+				"value1": {
+					"type": "float",
+					"default_value": 0,
+					"options": {
+						"spare": true
+					}
+				}
+			},
+			"inputs": [
+				{
+					"index": 0,
+					"node": "vec3ToFloat2",
+					"output": "y"
+				},
+				{
+					"index": 1,
+					"node": "constant2",
+					"output": "val"
+				}
+			],
+			"connection_points": {
+				"in": [
+					{
+						"name": "value0",
+						"type": "float"
+					},
+					{
+						"name": "value1",
+						"type": "float"
+					}
+				],
+				"out": [
+					{
+						"name": "val",
+						"type": "bool"
+					}
+				]
+			}
+		},
+		"twoWaySwitch1": {
+			"type": "twoWaySwitch",
+			"params": {
+				"condition": {
+					"type": "boolean",
+					"default_value": false,
+					"options": {
+						"spare": true
+					}
+				},
+				"ifTrue": {
+					"type": "vector2",
+					"default_value": [
+						0,
+						0
+					],
+					"options": {
+						"spare": true
+					}
+				},
+				"ifFalse": {
+					"type": "vector2",
+					"default_value": [
+						0,
+						0
+					],
+					"options": {
+						"spare": true
+					}
+				}
+			},
+			"inputs": [
+				{
+					"index": 0,
+					"node": "compare1",
+					"output": "val"
+				},
+				{
+					"index": 1,
+					"node": "floatToVec2_1",
+					"output": "vec2"
+				},
+				{
+					"index": 2,
+					"node": "floatToVec2_2",
+					"output": "vec2"
+				}
+			],
+			"connection_points": {
+				"in": [
+					{
+						"name": "condition",
+						"type": "bool"
+					},
+					{
+						"name": "ifTrue",
+						"type": "vec2"
+					},
+					{
+						"name": "ifFalse",
+						"type": "vec2"
+					}
+				],
+				"out": [
+					{
+						"name": "val",
+						"type": "vec2"
+					}
+				]
+			}
+		}
+	},
+	"params": {
+		"transparent": 1,
+		"metalness": 0,
+		"roughness": 1,
+		"shadowPCSS": 1,
+		"shadowPCSSSamplesCount": 32,
+		"shadowPCSSFilterSize": 0.2
+	},
+	"persisted_config": {
+		"material": {
+			"metadata": {
+				"version": 4.5,
+				"type": "Material",
+				"generator": "Material.toJSON"
+			},
+			"uuid": "/MAT/meshStandardBuilder_ROOM-main",
+			"type": "ShaderMaterial",
+			"name": "/MAT/meshStandardBuilder_ROOM",
+			"transparent": true,
+			"depthFunc": 3,
+			"depthTest": true,
+			"depthWrite": true,
+			"colorWrite": true,
+			"stencilWrite": false,
+			"stencilWriteMask": 255,
+			"stencilFunc": 519,
+			"stencilRef": 0,
+			"stencilFuncMask": 255,
+			"stencilFail": 7680,
+			"stencilZFail": 7680,
+			"stencilZPass": 7680,
+			"glslVersion": null,
+			"uniforms": {
+				"diffuse": {
+					"type": "c",
+					"value": 15658734
+				},
+				"opacity": {
+					"value": 1
+				},
+				"map": {
+					"value": null
+				},
+				"uvTransform": {
+					"type": "m3",
+					"value": [
+						1,
+						0,
+						0,
+						0,
+						1,
+						0,
+						0,
+						0,
+						1
+					]
+				},
+				"uv2Transform": {
+					"type": "m3",
+					"value": [
+						1,
+						0,
+						0,
+						0,
+						1,
+						0,
+						0,
+						0,
+						1
+					]
+				},
+				"alphaMap": {
+					"value": null
+				},
+				"envMap": {
+					"value": null
+				},
+				"flipEnvMap": {
+					"value": -1
+				},
+				"reflectivity": {
+					"value": 1
+				},
+				"refractionRatio": {
+					"value": 0.98
+				},
+				"maxMipLevel": {
+					"value": 0
+				},
+				"aoMap": {
+					"value": null
+				},
+				"aoMapIntensity": {
+					"value": 1
+				},
+				"lightMap": {
+					"value": null
+				},
+				"lightMapIntensity": {
+					"value": 1
+				},
+				"emissiveMap": {
+					"value": null
+				},
+				"bumpMap": {
+					"value": null
+				},
+				"bumpScale": {
+					"value": 1
+				},
+				"normalMap": {
+					"value": null
+				},
+				"normalScale": {
+					"type": "v2",
+					"value": [
+						1,
+						1
+					]
+				},
+				"displacementMap": {
+					"value": null
+				},
+				"displacementScale": {
+					"value": 1
+				},
+				"displacementBias": {
+					"value": 0
+				},
+				"roughnessMap": {
+					"value": null
+				},
+				"metalnessMap": {
+					"value": null
+				},
+				"fogDensity": {
+					"value": 0.00025
+				},
+				"fogNear": {
+					"value": 1
+				},
+				"fogFar": {
+					"value": 2000
+				},
+				"fogColor": {
+					"type": "c",
+					"value": 16777215
+				},
+				"ambientLightColor": {
+					"value": [
+						0,
+						0,
+						0
+					]
+				},
+				"lightProbe": {
+					"value": [
+						{
+							"x": 0,
+							"y": 0,
+							"z": 0
+						},
+						{
+							"x": 0,
+							"y": 0,
+							"z": 0
+						},
+						{
+							"x": 0,
+							"y": 0,
+							"z": 0
+						},
+						{
+							"x": 0,
+							"y": 0,
+							"z": 0
+						},
+						{
+							"x": 0,
+							"y": 0,
+							"z": 0
+						},
+						{
+							"x": 0,
+							"y": 0,
+							"z": 0
+						},
+						{
+							"x": 0,
+							"y": 0,
+							"z": 0
+						},
+						{
+							"x": 0,
+							"y": 0,
+							"z": 0
+						},
+						{
+							"x": 0,
+							"y": 0,
+							"z": 0
+						}
+					]
+				},
+				"directionalLights": {
+					"value": [
+						{
+							"direction": {
+								"x": 0.6005087696728634,
+								"y": 0.10165296084392754,
+								"z": 0.7931304388923973
+							},
+							"color": 16777215
+						},
+						{
+							"direction": {
+								"x": -0.6339770652593347,
+								"y": 0.10684891916147832,
+								"z": 0.7659349771352559
+							},
+							"color": 16777215
+						}
+					]
+				},
+				"directionalLightShadows": {
+					"value": [
+						{
+							"shadowBias": 0,
+							"shadowNormalBias": 0,
+							"shadowRadius": 0,
+							"shadowMapSize": {
+								"x": 1024,
+								"y": 1024
+							}
+						},
+						{
+							"shadowBias": 0,
+							"shadowNormalBias": 0,
+							"shadowRadius": 0,
+							"shadowMapSize": {
+								"x": 1024,
+								"y": 1024
+							}
+						}
+					]
+				},
+				"directionalShadowMap": {
+					"value": [
+						{
+							"metadata": {
+								"version": 4.5,
+								"type": "Texture",
+								"generator": "Texture.toJSON"
+							},
+							"uuid": "DD2F8885-2411-45F3-92E5-20BF0DAEC84A",
+							"name": "/directionalLight1:light.shadowMap",
+							"mapping": 300,
+							"repeat": [
+								1,
+								1
+							],
+							"offset": [
+								0,
+								0
+							],
+							"center": [
+								0,
+								0
+							],
+							"rotation": 0,
+							"wrap": [
+								1001,
+								1001
+							],
+							"format": 1023,
+							"type": 1009,
+							"encoding": 3000,
+							"minFilter": 1003,
+							"magFilter": 1003,
+							"anisotropy": 1,
+							"flipY": true,
+							"premultiplyAlpha": false,
+							"unpackAlignment": 4,
+							"image": "0D3FE507-965C-4CE4-9B43-8A4DC321C14B"
+						},
+						{
+							"metadata": {
+								"version": 4.5,
+								"type": "Texture",
+								"generator": "Texture.toJSON"
+							},
+							"uuid": "4BEAD8CD-D99D-4934-A1CE-0DC8261673EF",
+							"name": "/directionalLight2:light.shadowMap",
+							"mapping": 300,
+							"repeat": [
+								1,
+								1
+							],
+							"offset": [
+								0,
+								0
+							],
+							"center": [
+								0,
+								0
+							],
+							"rotation": 0,
+							"wrap": [
+								1001,
+								1001
+							],
+							"format": 1023,
+							"type": 1009,
+							"encoding": 3000,
+							"minFilter": 1003,
+							"magFilter": 1003,
+							"anisotropy": 1,
+							"flipY": true,
+							"premultiplyAlpha": false,
+							"unpackAlignment": 4,
+							"image": "8095CAC6-C042-4FED-BB94-D656D993C257"
+						}
+					]
+				},
+				"directionalShadowMatrix": {
+					"value": [
+						{
+							"elements": [
+								0.11310338155825243,
+								-0.013235875497056238,
+								-0.004128154676348421,
+								0,
+								-1.734723475976807e-18,
+								0.12107289514107887,
+								-0.00248938825990846,
+								0,
+								-0.053222411445634096,
+								-0.02812766719768536,
+								-0.008772775242765153,
+								0,
+								0.5,
+								0.3668198153448134,
+								0.050786375133947376,
+								1
+							]
+						},
+						{
+							"elements": [
+								0.0734731565365591,
+								0.02514929313069449,
+								0.007843846224409114,
+								0,
+								1.7347234759768067e-18,
+								0.12107289514107886,
+								-0.0024893882599084593,
+								0,
+								0.10112712429686845,
+								-0.01827203100872262,
+								-0.0056988878651675,
+								0,
+								0.4999999999999999,
+								0.3668198153448134,
+								0.05078637513394737,
+								1
+							]
+						}
+					]
+				},
+				"spotLights": {
+					"value": []
+				},
+				"spotLightShadows": {
+					"value": []
+				},
+				"spotShadowMap": {
+					"value": []
+				},
+				"spotShadowMatrix": {
+					"value": []
+				},
+				"pointLights": {
+					"value": []
+				},
+				"pointLightShadows": {
+					"value": []
+				},
+				"pointShadowMap": {
+					"value": []
+				},
+				"pointShadowMatrix": {
+					"value": []
+				},
+				"hemisphereLights": {
+					"value": []
+				},
+				"rectAreaLights": {
+					"value": []
+				},
+				"ltc_1": {
+					"value": null
+				},
+				"ltc_2": {
+					"value": null
+				},
+				"emissive": {
+					"type": "c",
+					"value": 0
+				},
+				"roughness": {
+					"value": 1
+				},
+				"metalness": {
+					"value": 0
+				},
+				"envMapIntensity": {
+					"value": 1
+				}
+			},
+			"vertexShader": "\n#define STANDARD\n\nvarying vec3 vViewPosition;\n\n#ifndef FLAT_SHADED\n\n\tvarying vec3 vNormal;\n\n\t#ifdef USE_TANGENT\n\n\t\tvarying vec3 vTangent;\n\t\tvarying vec3 vBitangent;\n\n\t#endif\n\n#endif\n\n#include <common>\n\n\n\n// /MAT/meshStandardBuilder_ROOM/globals1\nvarying vec3 v_POLY_globals1_position;\n\n\n\n\n#include <uv_pars_vertex>\n#include <uv2_pars_vertex>\n#include <displacementmap_pars_vertex>\n#include <color_pars_vertex>\n#include <fog_pars_vertex>\n#include <morphtarget_pars_vertex>\n#include <skinning_pars_vertex>\n#include <shadowmap_pars_vertex>\n#include <logdepthbuf_pars_vertex>\n#include <clipping_planes_pars_vertex>\n\nvoid main() {\n\n\t#include <uv_vertex>\n\t#include <uv2_vertex>\n\t#include <color_vertex>\n\n\n\n\t// /MAT/meshStandardBuilder_ROOM/globals1\n\tv_POLY_globals1_position = vec3(position);\n\t\n\t// /MAT/meshStandardBuilder_ROOM/output1\n\tvec3 transformed = position;\n\tvec3 objectNormal = normal;\n\t#ifdef USE_TANGENT\n\t\tvec3 objectTangent = vec3( tangent.xyz );\n\t#endif\n\n\n\n\n// removed:\n//\t#include <beginnormal_vertex>\n\t#include <morphnormal_vertex>\n\t#include <skinbase_vertex>\n\t#include <skinnormal_vertex>\n\t#include <defaultnormal_vertex>\n\n#ifndef FLAT_SHADED // Normal computed with derivatives when FLAT_SHADED\n\n\tvNormal = normalize( transformedNormal );\n\n\t#ifdef USE_TANGENT\n\n\t\tvTangent = normalize( transformedTangent );\n\t\tvBitangent = normalize( cross( vNormal, vTangent ) * tangent.w );\n\n\t#endif\n\n#endif\n\n// removed:\n//\t#include <begin_vertex>\n\t#include <morphtarget_vertex>\n\t#include <skinning_vertex>\n\t#include <displacementmap_vertex>\n\t#include <project_vertex>\n\t#include <logdepthbuf_vertex>\n\t#include <clipping_planes_vertex>\n\n\tvViewPosition = - mvPosition.xyz;\n\n\t#include <worldpos_vertex>\n\t#include <shadowmap_vertex>\n\t#include <fog_vertex>\n\n}\n",
+			"fragmentShader": "\n#define STANDARD\n\n#ifdef PHYSICAL\n\t#define REFLECTIVITY\n\t#define CLEARCOAT\n\t#define TRANSMISSION\n#endif\n\nuniform vec3 diffuse;\nuniform vec3 emissive;\nuniform float roughness;\nuniform float metalness;\nuniform float opacity;\n\n#ifdef TRANSMISSION\n\tuniform float transmission;\n#endif\n\n#ifdef REFLECTIVITY\n\tuniform float reflectivity;\n#endif\n\n#ifdef CLEARCOAT\n\tuniform float clearcoat;\n\tuniform float clearcoatRoughness;\n#endif\n\n#ifdef USE_SHEEN\n\tuniform vec3 sheen;\n#endif\n\nvarying vec3 vViewPosition;\n\n#ifndef FLAT_SHADED\n\n\tvarying vec3 vNormal;\n\n\t#ifdef USE_TANGENT\n\n\t\tvarying vec3 vTangent;\n\t\tvarying vec3 vBitangent;\n\n\t#endif\n\n#endif\n\n#include <common>\n\n\n\n// /MAT/meshStandardBuilder_ROOM/disk1\nfloat disk_feather(float dist, float radius, float feather){\n\tif(feather <= 0.0){\n\t\tif(dist < radius){return 1.0;}else{return 0.0;}\n\t} else {\n\t\tfloat half_feather = feather * 0.5;\n\t\tif(dist < (radius - half_feather)){\n\t\t\treturn 1.0;\n\t\t} else {\n\t\t\tif(dist > (radius + half_feather)){\n\t\t\t\treturn 0.0;\n\t\t\t} else {\n\t\t\t\tfloat feather_start = (radius - half_feather);\n\t\t\t\tfloat blend = 1.0 - (dist - feather_start) / feather;\n\t\t\t\treturn blend;\n\t\t\t}\n\t\t}\n\t}\n}\n\nfloat disk2d(vec2 pos, vec2 center, float radius, float feather){\n\tfloat dist = distance(pos, center);\n\treturn disk_feather(dist, radius, feather);\n}\n\n// function could be called sphere, but is an overload of disk, and is the same\nfloat disk3d(vec3 pos, vec3 center, float radius, float feather){\n\tfloat dist = distance(pos, center);\n\treturn disk_feather(dist, radius, feather);\n}\n\n// /MAT/meshStandardBuilder_ROOM/easing1\nfloat quadraticInOut(float t) {\n  float p = 2.0 * t * t;\n  return t < 0.5 ? p : -p + (4.0 * t) - 1.0;\n}\n\n\n\n\n\n\n\n\n\n// /MAT/meshStandardBuilder_ROOM/globals1\nvarying vec3 v_POLY_globals1_position;\n\n\n\n\n#include <packing>\n#include <dithering_pars_fragment>\n#include <color_pars_fragment>\n#include <uv_pars_fragment>\n#include <uv2_pars_fragment>\n#include <map_pars_fragment>\n#include <alphamap_pars_fragment>\n#include <aomap_pars_fragment>\n#include <lightmap_pars_fragment>\n#include <emissivemap_pars_fragment>\n#include <transmissionmap_pars_fragment>\n#include <bsdfs>\n#include <cube_uv_reflection_fragment>\n#include <envmap_common_pars_fragment>\n#include <envmap_physical_pars_fragment>\n#include <fog_pars_fragment>\n#include <lights_pars_begin>\n#include <lights_physical_pars_fragment>\n\n#ifdef USE_SHADOWMAP\n\n#define NUM_SAMPLES 32\n#define PCSS_FILTER_SIZE 0.2\n#define LIGHT_WORLD_SIZE 0.005\n// #define LIGHT_FRUSTUM_WIDTH 1.0\n// #define PCSS_FILTER_SIZE 1.0\n#define LIGHT_SIZE_UV (PCSS_FILTER_SIZE * LIGHT_WORLD_SIZE)\n#define NEAR_PLANE 9.5\n\n// #define NUM_SAMPLES 32\n#define NUM_RINGS 11\n#define BLOCKER_SEARCH_NUM_SAMPLES NUM_SAMPLES\n#define PCF_NUM_SAMPLES NUM_SAMPLES\n\nvec2 poissonDisk[NUM_SAMPLES];\n\nvoid initPoissonSamples( const in vec2 randomSeed ) {\n\tfloat ANGLE_STEP = PI2 * float( NUM_RINGS ) / float( NUM_SAMPLES );\n\tfloat INV_NUM_SAMPLES = 1.0 / float( NUM_SAMPLES );\n\n\t// jsfiddle that shows sample pattern: https://jsfiddle.net/a16ff1p7/\n\tfloat angle = rand( randomSeed ) * PI2;\n\tfloat radius = INV_NUM_SAMPLES;\n\tfloat radiusStep = radius;\n\n\tfor( int i = 0; i < NUM_SAMPLES; i ++ ) {\n\t\tpoissonDisk[i] = vec2( cos( angle ), sin( angle ) ) * pow( radius, 0.75 );\n\t\tradius += radiusStep;\n\t\tangle += ANGLE_STEP;\n\t}\n}\n\nfloat penumbraSize( const in float zReceiver, const in float zBlocker ) { // Parallel plane estimation\n\treturn (zReceiver - zBlocker) / zBlocker;\n}\n\nfloat findBlocker( sampler2D shadowMap, const in vec2 uv, const in float zReceiver ) {\n\t// This uses similar triangles to compute what\n\t// area of the shadow map we should search\n\tfloat searchRadius = LIGHT_SIZE_UV * ( zReceiver - NEAR_PLANE ) / zReceiver;\n\tfloat blockerDepthSum = 0.0;\n\tint numBlockers = 0;\n\n\tfor( int i = 0; i < BLOCKER_SEARCH_NUM_SAMPLES; i++ ) {\n\t\tfloat shadowMapDepth = unpackRGBAToDepth(texture2D(shadowMap, uv + poissonDisk[i] * searchRadius));\n\t\tif ( shadowMapDepth < zReceiver ) {\n\t\t\tblockerDepthSum += shadowMapDepth;\n\t\t\tnumBlockers ++;\n\t\t}\n\t}\n\n\tif( numBlockers == 0 ) return -1.0;\n\n\treturn blockerDepthSum / float( numBlockers );\n}\n\nfloat PCF_Filter(sampler2D shadowMap, vec2 uv, float zReceiver, float filterRadius ) {\n\tfloat sum = 0.0;\n\tfor( int i = 0; i < PCF_NUM_SAMPLES; i ++ ) {\n\t\tfloat depth = unpackRGBAToDepth( texture2D( shadowMap, uv + poissonDisk[ i ] * filterRadius ) );\n\t\tif( zReceiver <= depth ) sum += 1.0;\n\t}\n\tfor( int i = 0; i < PCF_NUM_SAMPLES; i ++ ) {\n\t\tfloat depth = unpackRGBAToDepth( texture2D( shadowMap, uv + -poissonDisk[ i ].yx * filterRadius ) );\n\t\tif( zReceiver <= depth ) sum += 1.0;\n\t}\n\treturn sum / ( 2.0 * float( PCF_NUM_SAMPLES ) );\n}\n\nfloat PCSS ( sampler2D shadowMap, vec4 coords ) {\n\tvec2 uv = coords.xy;\n\tfloat zReceiver = coords.z; // Assumed to be eye-space z in this code\n\n\tinitPoissonSamples( uv );\n\t// STEP 1: blocker search\n\tfloat avgBlockerDepth = findBlocker( shadowMap, uv, zReceiver );\n\n\t//There are no occluders so early out (this saves filtering)\n\tif( avgBlockerDepth == -1.0 ) return 1.0;\n\n\t// STEP 2: penumbra size\n\tfloat penumbraRatio = penumbraSize( zReceiver, avgBlockerDepth );\n\tfloat filterRadius = penumbraRatio * LIGHT_SIZE_UV * NEAR_PLANE / zReceiver;\n\n\t// STEP 3: filtering\n\t//return avgBlockerDepth;\n\treturn PCF_Filter( shadowMap, uv, zReceiver, filterRadius );\n}\n\n\t\t\t\t\n\n\t#if NUM_DIR_LIGHT_SHADOWS > 0\n\n\t\tuniform sampler2D directionalShadowMap[ NUM_DIR_LIGHT_SHADOWS ];\n\t\tvarying vec4 vDirectionalShadowCoord[ NUM_DIR_LIGHT_SHADOWS ];\n\n\t\tstruct DirectionalLightShadow {\n\t\t\tfloat shadowBias;\n\t\t\tfloat shadowNormalBias;\n\t\t\tfloat shadowRadius;\n\t\t\tvec2 shadowMapSize;\n\t\t};\n\n\t\tuniform DirectionalLightShadow directionalLightShadows[ NUM_DIR_LIGHT_SHADOWS ];\n\n\t#endif\n\n\t#if NUM_SPOT_LIGHT_SHADOWS > 0\n\n\t\tuniform sampler2D spotShadowMap[ NUM_SPOT_LIGHT_SHADOWS ];\n\t\tvarying vec4 vSpotShadowCoord[ NUM_SPOT_LIGHT_SHADOWS ];\n\n\t\tstruct SpotLightShadow {\n\t\t\tfloat shadowBias;\n\t\t\tfloat shadowNormalBias;\n\t\t\tfloat shadowRadius;\n\t\t\tvec2 shadowMapSize;\n\t\t};\n\n\t\tuniform SpotLightShadow spotLightShadows[ NUM_SPOT_LIGHT_SHADOWS ];\n\n\t#endif\n\n\t#if NUM_POINT_LIGHT_SHADOWS > 0\n\n\t\tuniform sampler2D pointShadowMap[ NUM_POINT_LIGHT_SHADOWS ];\n\t\tvarying vec4 vPointShadowCoord[ NUM_POINT_LIGHT_SHADOWS ];\n\n\t\tstruct PointLightShadow {\n\t\t\tfloat shadowBias;\n\t\t\tfloat shadowNormalBias;\n\t\t\tfloat shadowRadius;\n\t\t\tvec2 shadowMapSize;\n\t\t\tfloat shadowCameraNear;\n\t\t\tfloat shadowCameraFar;\n\t\t};\n\n\t\tuniform PointLightShadow pointLightShadows[ NUM_POINT_LIGHT_SHADOWS ];\n\n\t#endif\n\n\t/*\n\t#if NUM_RECT_AREA_LIGHTS > 0\n\n\t\t// TODO (abelnation): create uniforms for area light shadows\n\n\t#endif\n\t*/\n\n\tfloat texture2DCompare( sampler2D depths, vec2 uv, float compare ) {\n\n\t\treturn step( compare, unpackRGBAToDepth( texture2D( depths, uv ) ) );\n\n\t}\n\n\tvec2 texture2DDistribution( sampler2D shadow, vec2 uv ) {\n\n\t\treturn unpackRGBATo2Half( texture2D( shadow, uv ) );\n\n\t}\n\n\tfloat VSMShadow (sampler2D shadow, vec2 uv, float compare ){\n\n\t\tfloat occlusion = 1.0;\n\n\t\tvec2 distribution = texture2DDistribution( shadow, uv );\n\n\t\tfloat hard_shadow = step( compare , distribution.x ); // Hard Shadow\n\n\t\tif (hard_shadow != 1.0 ) {\n\n\t\t\tfloat distance = compare - distribution.x ;\n\t\t\tfloat variance = max( 0.00000, distribution.y * distribution.y );\n\t\t\tfloat softness_probability = variance / (variance + distance * distance ); // Chebeyshevs inequality\n\t\t\tsoftness_probability = clamp( ( softness_probability - 0.3 ) / ( 0.95 - 0.3 ), 0.0, 1.0 ); // 0.3 reduces light bleed\n\t\t\tocclusion = clamp( max( hard_shadow, softness_probability ), 0.0, 1.0 );\n\n\t\t}\n\t\treturn occlusion;\n\n\t}\n\n\tfloat getShadow( sampler2D shadowMap, vec2 shadowMapSize, float shadowBias, float shadowRadius, vec4 shadowCoord ) {\n\n\t\tfloat shadow = 1.0;\n\n\t\tshadowCoord.xyz /= shadowCoord.w;\n\t\tshadowCoord.z += shadowBias;\n\n\t\t// if ( something && something ) breaks ATI OpenGL shader compiler\n\t\t// if ( all( something, something ) ) using this instead\n\n\t\tbvec4 inFrustumVec = bvec4 ( shadowCoord.x >= 0.0, shadowCoord.x <= 1.0, shadowCoord.y >= 0.0, shadowCoord.y <= 1.0 );\n\t\tbool inFrustum = all( inFrustumVec );\n\n\t\tbvec2 frustumTestVec = bvec2( inFrustum, shadowCoord.z <= 1.0 );\n\n\t\tbool frustumTest = all( frustumTestVec );\n\n\t\tif ( frustumTest ) {\n\n\t\t\n\t\t\t\treturn PCSS( shadowMap, shadowCoord );\n\t\t\t\t#if defined( SHADOWMAP_TYPE_PCF )\n\n\t\t\tvec2 texelSize = vec2( 1.0 ) / shadowMapSize;\n\n\t\t\tfloat dx0 = - texelSize.x * shadowRadius;\n\t\t\tfloat dy0 = - texelSize.y * shadowRadius;\n\t\t\tfloat dx1 = + texelSize.x * shadowRadius;\n\t\t\tfloat dy1 = + texelSize.y * shadowRadius;\n\t\t\tfloat dx2 = dx0 / 2.0;\n\t\t\tfloat dy2 = dy0 / 2.0;\n\t\t\tfloat dx3 = dx1 / 2.0;\n\t\t\tfloat dy3 = dy1 / 2.0;\n\n\t\t\tshadow = (\n\t\t\t\ttexture2DCompare( shadowMap, shadowCoord.xy + vec2( dx0, dy0 ), shadowCoord.z ) +\n\t\t\t\ttexture2DCompare( shadowMap, shadowCoord.xy + vec2( 0.0, dy0 ), shadowCoord.z ) +\n\t\t\t\ttexture2DCompare( shadowMap, shadowCoord.xy + vec2( dx1, dy0 ), shadowCoord.z ) +\n\t\t\t\ttexture2DCompare( shadowMap, shadowCoord.xy + vec2( dx2, dy2 ), shadowCoord.z ) +\n\t\t\t\ttexture2DCompare( shadowMap, shadowCoord.xy + vec2( 0.0, dy2 ), shadowCoord.z ) +\n\t\t\t\ttexture2DCompare( shadowMap, shadowCoord.xy + vec2( dx3, dy2 ), shadowCoord.z ) +\n\t\t\t\ttexture2DCompare( shadowMap, shadowCoord.xy + vec2( dx0, 0.0 ), shadowCoord.z ) +\n\t\t\t\ttexture2DCompare( shadowMap, shadowCoord.xy + vec2( dx2, 0.0 ), shadowCoord.z ) +\n\t\t\t\ttexture2DCompare( shadowMap, shadowCoord.xy, shadowCoord.z ) +\n\t\t\t\ttexture2DCompare( shadowMap, shadowCoord.xy + vec2( dx3, 0.0 ), shadowCoord.z ) +\n\t\t\t\ttexture2DCompare( shadowMap, shadowCoord.xy + vec2( dx1, 0.0 ), shadowCoord.z ) +\n\t\t\t\ttexture2DCompare( shadowMap, shadowCoord.xy + vec2( dx2, dy3 ), shadowCoord.z ) +\n\t\t\t\ttexture2DCompare( shadowMap, shadowCoord.xy + vec2( 0.0, dy3 ), shadowCoord.z ) +\n\t\t\t\ttexture2DCompare( shadowMap, shadowCoord.xy + vec2( dx3, dy3 ), shadowCoord.z ) +\n\t\t\t\ttexture2DCompare( shadowMap, shadowCoord.xy + vec2( dx0, dy1 ), shadowCoord.z ) +\n\t\t\t\ttexture2DCompare( shadowMap, shadowCoord.xy + vec2( 0.0, dy1 ), shadowCoord.z ) +\n\t\t\t\ttexture2DCompare( shadowMap, shadowCoord.xy + vec2( dx1, dy1 ), shadowCoord.z )\n\t\t\t) * ( 1.0 / 17.0 );\n\n\t\t#elif defined( SHADOWMAP_TYPE_PCF_SOFT )\n\n\t\t\tvec2 texelSize = vec2( 1.0 ) / shadowMapSize;\n\t\t\tfloat dx = texelSize.x;\n\t\t\tfloat dy = texelSize.y;\n\n\t\t\tvec2 uv = shadowCoord.xy;\n\t\t\tvec2 f = fract( uv * shadowMapSize + 0.5 );\n\t\t\tuv -= f * texelSize;\n\n\t\t\tshadow = (\n\t\t\t\ttexture2DCompare( shadowMap, uv, shadowCoord.z ) +\n\t\t\t\ttexture2DCompare( shadowMap, uv + vec2( dx, 0.0 ), shadowCoord.z ) +\n\t\t\t\ttexture2DCompare( shadowMap, uv + vec2( 0.0, dy ), shadowCoord.z ) +\n\t\t\t\ttexture2DCompare( shadowMap, uv + texelSize, shadowCoord.z ) +\n\t\t\t\tmix( texture2DCompare( shadowMap, uv + vec2( -dx, 0.0 ), shadowCoord.z ), \n\t\t\t\t\t texture2DCompare( shadowMap, uv + vec2( 2.0 * dx, 0.0 ), shadowCoord.z ),\n\t\t\t\t\t f.x ) +\n\t\t\t\tmix( texture2DCompare( shadowMap, uv + vec2( -dx, dy ), shadowCoord.z ), \n\t\t\t\t\t texture2DCompare( shadowMap, uv + vec2( 2.0 * dx, dy ), shadowCoord.z ),\n\t\t\t\t\t f.x ) +\n\t\t\t\tmix( texture2DCompare( shadowMap, uv + vec2( 0.0, -dy ), shadowCoord.z ), \n\t\t\t\t\t texture2DCompare( shadowMap, uv + vec2( 0.0, 2.0 * dy ), shadowCoord.z ),\n\t\t\t\t\t f.y ) +\n\t\t\t\tmix( texture2DCompare( shadowMap, uv + vec2( dx, -dy ), shadowCoord.z ), \n\t\t\t\t\t texture2DCompare( shadowMap, uv + vec2( dx, 2.0 * dy ), shadowCoord.z ),\n\t\t\t\t\t f.y ) +\n\t\t\t\tmix( mix( texture2DCompare( shadowMap, uv + vec2( -dx, -dy ), shadowCoord.z ), \n\t\t\t\t\t\t  texture2DCompare( shadowMap, uv + vec2( 2.0 * dx, -dy ), shadowCoord.z ),\n\t\t\t\t\t\t  f.x ),\n\t\t\t\t\t mix( texture2DCompare( shadowMap, uv + vec2( -dx, 2.0 * dy ), shadowCoord.z ), \n\t\t\t\t\t\t  texture2DCompare( shadowMap, uv + vec2( 2.0 * dx, 2.0 * dy ), shadowCoord.z ),\n\t\t\t\t\t\t  f.x ),\n\t\t\t\t\t f.y )\n\t\t\t) * ( 1.0 / 9.0 );\n\n\t\t#elif defined( SHADOWMAP_TYPE_VSM )\n\n\t\t\tshadow = VSMShadow( shadowMap, shadowCoord.xy, shadowCoord.z );\n\n\t\t#else // no percentage-closer filtering:\n\n\t\t\tshadow = texture2DCompare( shadowMap, shadowCoord.xy, shadowCoord.z );\n\n\t\t#endif\n\n\t\t}\n\n\t\treturn shadow;\n\n\t}\n\n\t// cubeToUV() maps a 3D direction vector suitable for cube texture mapping to a 2D\n\t// vector suitable for 2D texture mapping. This code uses the following layout for the\n\t// 2D texture:\n\t//\n\t// xzXZ\n\t//  y Y\n\t//\n\t// Y - Positive y direction\n\t// y - Negative y direction\n\t// X - Positive x direction\n\t// x - Negative x direction\n\t// Z - Positive z direction\n\t// z - Negative z direction\n\t//\n\t// Source and test bed:\n\t// https://gist.github.com/tschw/da10c43c467ce8afd0c4\n\n\tvec2 cubeToUV( vec3 v, float texelSizeY ) {\n\n\t\t// Number of texels to avoid at the edge of each square\n\n\t\tvec3 absV = abs( v );\n\n\t\t// Intersect unit cube\n\n\t\tfloat scaleToCube = 1.0 / max( absV.x, max( absV.y, absV.z ) );\n\t\tabsV *= scaleToCube;\n\n\t\t// Apply scale to avoid seams\n\n\t\t// two texels less per square (one texel will do for NEAREST)\n\t\tv *= scaleToCube * ( 1.0 - 2.0 * texelSizeY );\n\n\t\t// Unwrap\n\n\t\t// space: -1 ... 1 range for each square\n\t\t//\n\t\t// #X##\t\tdim    := ( 4 , 2 )\n\t\t//  # #\t\tcenter := ( 1 , 1 )\n\n\t\tvec2 planar = v.xy;\n\n\t\tfloat almostATexel = 1.5 * texelSizeY;\n\t\tfloat almostOne = 1.0 - almostATexel;\n\n\t\tif ( absV.z >= almostOne ) {\n\n\t\t\tif ( v.z > 0.0 )\n\t\t\t\tplanar.x = 4.0 - v.x;\n\n\t\t} else if ( absV.x >= almostOne ) {\n\n\t\t\tfloat signX = sign( v.x );\n\t\t\tplanar.x = v.z * signX + 2.0 * signX;\n\n\t\t} else if ( absV.y >= almostOne ) {\n\n\t\t\tfloat signY = sign( v.y );\n\t\t\tplanar.x = v.x + 2.0 * signY + 2.0;\n\t\t\tplanar.y = v.z * signY - 2.0;\n\n\t\t}\n\n\t\t// Transform to UV space\n\n\t\t// scale := 0.5 / dim\n\t\t// translate := ( center + 0.5 ) / dim\n\t\treturn vec2( 0.125, 0.25 ) * planar + vec2( 0.375, 0.75 );\n\n\t}\n\n\tfloat getPointShadow( sampler2D shadowMap, vec2 shadowMapSize, float shadowBias, float shadowRadius, vec4 shadowCoord, float shadowCameraNear, float shadowCameraFar ) {\n\n\t\tvec2 texelSize = vec2( 1.0 ) / ( shadowMapSize * vec2( 4.0, 2.0 ) );\n\n\t\t// for point lights, the uniform @vShadowCoord is re-purposed to hold\n\t\t// the vector from the light to the world-space position of the fragment.\n\t\tvec3 lightToPosition = shadowCoord.xyz;\n\n\t\t// dp = normalized distance from light to fragment position\n\t\tfloat dp = ( length( lightToPosition ) - shadowCameraNear ) / ( shadowCameraFar - shadowCameraNear ); // need to clamp?\n\t\tdp += shadowBias;\n\n\t\t// bd3D = base direction 3D\n\t\tvec3 bd3D = normalize( lightToPosition );\n\n\t\t#if defined( SHADOWMAP_TYPE_PCF ) || defined( SHADOWMAP_TYPE_PCF_SOFT ) || defined( SHADOWMAP_TYPE_VSM )\n\n\t\t\tvec2 offset = vec2( - 1, 1 ) * shadowRadius * texelSize.y;\n\n\t\t\treturn (\n\t\t\t\ttexture2DCompare( shadowMap, cubeToUV( bd3D + offset.xyy, texelSize.y ), dp ) +\n\t\t\t\ttexture2DCompare( shadowMap, cubeToUV( bd3D + offset.yyy, texelSize.y ), dp ) +\n\t\t\t\ttexture2DCompare( shadowMap, cubeToUV( bd3D + offset.xyx, texelSize.y ), dp ) +\n\t\t\t\ttexture2DCompare( shadowMap, cubeToUV( bd3D + offset.yyx, texelSize.y ), dp ) +\n\t\t\t\ttexture2DCompare( shadowMap, cubeToUV( bd3D, texelSize.y ), dp ) +\n\t\t\t\ttexture2DCompare( shadowMap, cubeToUV( bd3D + offset.xxy, texelSize.y ), dp ) +\n\t\t\t\ttexture2DCompare( shadowMap, cubeToUV( bd3D + offset.yxy, texelSize.y ), dp ) +\n\t\t\t\ttexture2DCompare( shadowMap, cubeToUV( bd3D + offset.xxx, texelSize.y ), dp ) +\n\t\t\t\ttexture2DCompare( shadowMap, cubeToUV( bd3D + offset.yxx, texelSize.y ), dp )\n\t\t\t) * ( 1.0 / 9.0 );\n\n\t\t#else // no percentage-closer filtering\n\n\t\t\treturn texture2DCompare( shadowMap, cubeToUV( bd3D, texelSize.y ), dp );\n\n\t\t#endif\n\n\t}\n\n#endif\n\n#include <bumpmap_pars_fragment>\n#include <normalmap_pars_fragment>\n#include <clearcoat_pars_fragment>\n#include <roughnessmap_pars_fragment>\n#include <metalnessmap_pars_fragment>\n#include <logdepthbuf_pars_fragment>\n#include <clipping_planes_pars_fragment>\n\nstruct SSSModel {\n\tbool isActive;\n\tvec3 color;\n\tfloat thickness;\n\tfloat power;\n\tfloat scale;\n\tfloat distortion;\n\tfloat ambient;\n\tfloat attenuation;\n};\n\nvoid RE_Direct_Scattering(\n\tconst in IncidentLight directLight,\n\tconst in GeometricContext geometry,\n\tconst in SSSModel sssModel,\n\tinout ReflectedLight reflectedLight\n\t){\n\tvec3 scatteringHalf = normalize(directLight.direction + (geometry.normal * sssModel.distortion));\n\tfloat scatteringDot = pow(saturate(dot(geometry.viewDir, -scatteringHalf)), sssModel.power) * sssModel.scale;\n\tvec3 scatteringIllu = (scatteringDot + sssModel.ambient) * (sssModel.color * (1.0-sssModel.thickness));\n\treflectedLight.directDiffuse += scatteringIllu * sssModel.attenuation * directLight.color;\n}\n\nvoid main() {\n\n\t#include <clipping_planes_fragment>\n\n\tvec4 diffuseColor = vec4( diffuse, opacity );\n\n\n\n\t// /MAT/meshStandardBuilder_ROOM/constant2\n\tfloat v_POLY_constant2_val = 5.4;\n\t\n\t// /MAT/meshStandardBuilder_ROOM/constant1\n\tfloat v_POLY_constant1_val = 0.57;\n\t\n\t// /MAT/meshStandardBuilder_ROOM/vec3ToFloat2\n\tfloat v_POLY_vec3ToFloat2_x = v_POLY_globals1_position.x;\n\tfloat v_POLY_vec3ToFloat2_y = v_POLY_globals1_position.y;\n\t\n\t// /MAT/meshStandardBuilder_ROOM/vec3ToFloat1\n\tfloat v_POLY_vec3ToFloat1_x = v_POLY_globals1_position.x;\n\tfloat v_POLY_vec3ToFloat1_z = v_POLY_globals1_position.z;\n\t\n\t// /MAT/meshStandardBuilder_ROOM/negate1\n\tfloat v_POLY_negate1_val = -1.0 * v_POLY_constant2_val;\n\t\n\t// /MAT/meshStandardBuilder_ROOM/compare1\n\tbool v_POLY_compare1_val = (v_POLY_vec3ToFloat2_y < v_POLY_constant2_val);\n\t\n\t// /MAT/meshStandardBuilder_ROOM/multAdd3\n\tfloat v_POLY_multAdd3_val = (v_POLY_constant1_val*(v_POLY_vec3ToFloat2_x + 0.0)) + 0.0;\n\t\n\t// /MAT/meshStandardBuilder_ROOM/multAdd2\n\tfloat v_POLY_multAdd2_val = (1.0*(v_POLY_vec3ToFloat2_y + v_POLY_negate1_val)) + 0.0;\n\t\n\t// /MAT/meshStandardBuilder_ROOM/multAdd1\n\tfloat v_POLY_multAdd1_val = (v_POLY_constant1_val*(v_POLY_vec3ToFloat1_x + 0.0)) + 0.0;\n\t\n\t// /MAT/meshStandardBuilder_ROOM/floatToVec2_2\n\tvec2 v_POLY_floatToVec2_2_vec2 = vec2(v_POLY_multAdd3_val, v_POLY_multAdd2_val);\n\t\n\t// /MAT/meshStandardBuilder_ROOM/floatToVec2_1\n\tvec2 v_POLY_floatToVec2_1_vec2 = vec2(v_POLY_multAdd1_val, v_POLY_vec3ToFloat1_z);\n\t\n\t// /MAT/meshStandardBuilder_ROOM/twoWaySwitch1\n\tvec2 v_POLY_twoWaySwitch1_val;\n\tif(v_POLY_compare1_val){\n\tv_POLY_twoWaySwitch1_val = v_POLY_floatToVec2_1_vec2;\n\t} else {\n\tv_POLY_twoWaySwitch1_val = v_POLY_floatToVec2_2_vec2;\n\t}\n\t\n\t// /MAT/meshStandardBuilder_ROOM/disk1\n\tfloat v_POLY_disk1_float = disk2d(v_POLY_twoWaySwitch1_val, vec2(0.0, 0.0), 1.8, 1.0);\n\t\n\t// /MAT/meshStandardBuilder_ROOM/easing1\n\tfloat v_POLY_easing1_out = quadraticInOut(v_POLY_disk1_float);\n\t\n\t// /MAT/meshStandardBuilder_ROOM/output1\n\tdiffuseColor.a = v_POLY_easing1_out;\n\tfloat POLY_metalness = 1.0;\n\tfloat POLY_roughness = 1.0;\n\tvec3 POLY_emissive = vec3(1.0, 1.0, 1.0);\n\tSSSModel POLY_SSSModel = SSSModel(/*isActive*/false,/*color*/vec3(1.0, 1.0, 1.0), /*thickness*/0.1, /*power*/2.0, /*scale*/16.0, /*distortion*/0.1,/*ambient*/0.4,/*attenuation*/0.8 );\n\n\n\n\tReflectedLight reflectedLight = ReflectedLight( vec3( 0.0 ), vec3( 0.0 ), vec3( 0.0 ), vec3( 0.0 ) );\n\tvec3 totalEmissiveRadiance = emissive * POLY_emissive;\n\n\t#ifdef TRANSMISSION\n\t\tfloat totalTransmission = transmission;\n\t#endif\n\n\t#include <logdepthbuf_fragment>\n\t#include <map_fragment>\n\t#include <color_fragment>\n\t#include <alphamap_fragment>\n\t#include <alphatest_fragment>\n\tfloat roughnessFactor = roughness * POLY_roughness;\n\n#ifdef USE_ROUGHNESSMAP\n\n\tvec4 texelRoughness = texture2D( roughnessMap, vUv );\n\n\t// reads channel G, compatible with a combined OcclusionRoughnessMetallic (RGB) texture\n\troughnessFactor *= texelRoughness.g;\n\n#endif\n\n\tfloat metalnessFactor = metalness * POLY_metalness;\n\n#ifdef USE_METALNESSMAP\n\n\tvec4 texelMetalness = texture2D( metalnessMap, vUv );\n\n\t// reads channel B, compatible with a combined OcclusionRoughnessMetallic (RGB) texture\n\tmetalnessFactor *= texelMetalness.b;\n\n#endif\n\n\t#include <normal_fragment_begin>\n\t#include <normal_fragment_maps>\n\t#include <clearcoat_normal_fragment_begin>\n\t#include <clearcoat_normal_fragment_maps>\n\t#include <emissivemap_fragment>\n\t#include <transmissionmap_fragment>\n\n\t// accumulation\n\t#include <lights_physical_fragment>\n\t#include <lights_fragment_begin>\nif(POLY_SSSModel.isActive){\n\tRE_Direct_Scattering(directLight, geometry, POLY_SSSModel, reflectedLight);\n}\n\n\n\t#include <lights_fragment_maps>\n\t#include <lights_fragment_end>\n\n\t// modulation\n\t#include <aomap_fragment>\n\n\tvec3 outgoingLight = reflectedLight.directDiffuse + reflectedLight.indirectDiffuse + reflectedLight.directSpecular + reflectedLight.indirectSpecular + totalEmissiveRadiance;\n\n\t// this is a stub for the transmission model\n\t#ifdef TRANSMISSION\n\t\tdiffuseColor.a *= mix( saturate( 1. - totalTransmission + linearToRelativeLuminance( reflectedLight.directSpecular + reflectedLight.indirectSpecular ) ), 1.0, metalness );\n\t#endif\n\n\tgl_FragColor = vec4( outgoingLight, diffuseColor.a );\n\n\t#include <tonemapping_fragment>\n\t#include <encodings_fragment>\n\t#include <fog_fragment>\n\t#include <premultiplied_alpha_fragment>\n\t#include <dithering_fragment>\n\n}\n",
+			"extensions": {
+				"derivatives": true
+			},
+			"shadowSide": null,
+			"lights": true
+		},
+		"uniforms_time_dependent": false,
+		"uniforms_resolution_dependent": false,
+		"param_uniform_pairs": [],
+		"customMaterials": {
+			"customDistanceMaterial": {
+				"metadata": {
+					"version": 4.5,
+					"type": "Material",
+					"generator": "Material.toJSON"
+				},
+				"uuid": "/MAT/meshStandardBuilder_ROOM-customDistanceMaterial",
+				"type": "ShaderMaterial",
+				"name": "customDistanceMaterial",
+				"depthFunc": 3,
+				"depthTest": true,
+				"depthWrite": true,
+				"colorWrite": true,
+				"stencilWrite": false,
+				"stencilWriteMask": 255,
+				"stencilFunc": 519,
+				"stencilRef": 0,
+				"stencilFuncMask": 255,
+				"stencilFail": 7680,
+				"stencilZFail": 7680,
+				"stencilZPass": 7680,
+				"glslVersion": null,
+				"uniforms": {
+					"diffuse": {
+						"type": "c",
+						"value": 15658734
+					},
+					"opacity": {
+						"value": 1
+					},
+					"map": {
+						"value": null
+					},
+					"uvTransform": {
+						"type": "m3",
+						"value": [
+							1,
+							0,
+							0,
+							0,
+							1,
+							0,
+							0,
+							0,
+							1
+						]
+					},
+					"uv2Transform": {
+						"type": "m3",
+						"value": [
+							1,
+							0,
+							0,
+							0,
+							1,
+							0,
+							0,
+							0,
+							1
+						]
+					},
+					"alphaMap": {
+						"value": null
+					},
+					"displacementMap": {
+						"value": null
+					},
+					"displacementScale": {
+						"value": 1
+					},
+					"displacementBias": {
+						"value": 0
+					},
+					"referencePosition": {
+						"type": "v3",
+						"value": [
+							0,
+							0,
+							0
+						]
+					},
+					"nearDistance": {
+						"value": 1
+					},
+					"farDistance": {
+						"value": 1000
+					}
+				},
+				"defines": {
+					"DEPTH_PACKING": 3201
+				},
+				"vertexShader": "\n#define DISTANCE\n\nvarying vec3 vWorldPosition;\n\n#include <common>\n\n\n\n// /MAT/meshStandardBuilder_ROOM/globals1\nvarying vec3 v_POLY_globals1_position;\n\n\n\n\n#include <uv_pars_vertex>\n#include <displacementmap_pars_vertex>\n#include <morphtarget_pars_vertex>\n#include <skinning_pars_vertex>\n#include <clipping_planes_pars_vertex>\n\nvoid main() {\n\n\t#include <uv_vertex>\n\n\t#include <skinbase_vertex>\n\n\t#ifdef USE_DISPLACEMENTMAP\n\n// removed:\n//\t\t#include <beginnormal_vertex>\n\t\t#include <morphnormal_vertex>\n\t\t#include <skinnormal_vertex>\n\n\t#endif\n\n// removed:\n//\t#include <begin_vertex>\n\n\n\n\t// /MAT/meshStandardBuilder_ROOM/globals1\n\tv_POLY_globals1_position = vec3(position);\n\t\n\t// /MAT/meshStandardBuilder_ROOM/output1\n\tvec3 transformed = position;\n\tvec3 objectNormal = normal;\n\t#ifdef USE_TANGENT\n\t\tvec3 objectTangent = vec3( tangent.xyz );\n\t#endif\n\n\n\n\t#include <morphtarget_vertex>\n\t#include <skinning_vertex>\n\t#include <displacementmap_vertex>\n\t#include <project_vertex>\n\t#include <worldpos_vertex>\n\t#include <clipping_planes_vertex>\n\n\tvWorldPosition = worldPosition.xyz;\n\n}\n",
+				"fragmentShader": "\n#define DISTANCE\n\nuniform vec3 referencePosition;\nuniform float nearDistance;\nuniform float farDistance;\nvarying vec3 vWorldPosition;\n\n#include <common>\n\n\n\n// /MAT/meshStandardBuilder_ROOM/disk1\nfloat disk_feather(float dist, float radius, float feather){\n\tif(feather <= 0.0){\n\t\tif(dist < radius){return 1.0;}else{return 0.0;}\n\t} else {\n\t\tfloat half_feather = feather * 0.5;\n\t\tif(dist < (radius - half_feather)){\n\t\t\treturn 1.0;\n\t\t} else {\n\t\t\tif(dist > (radius + half_feather)){\n\t\t\t\treturn 0.0;\n\t\t\t} else {\n\t\t\t\tfloat feather_start = (radius - half_feather);\n\t\t\t\tfloat blend = 1.0 - (dist - feather_start) / feather;\n\t\t\t\treturn blend;\n\t\t\t}\n\t\t}\n\t}\n}\n\nfloat disk2d(vec2 pos, vec2 center, float radius, float feather){\n\tfloat dist = distance(pos, center);\n\treturn disk_feather(dist, radius, feather);\n}\n\n// function could be called sphere, but is an overload of disk, and is the same\nfloat disk3d(vec3 pos, vec3 center, float radius, float feather){\n\tfloat dist = distance(pos, center);\n\treturn disk_feather(dist, radius, feather);\n}\n\n// /MAT/meshStandardBuilder_ROOM/easing1\nfloat quadraticInOut(float t) {\n  float p = 2.0 * t * t;\n  return t < 0.5 ? p : -p + (4.0 * t) - 1.0;\n}\n\n\n\n\n\n\n\n\n\n// /MAT/meshStandardBuilder_ROOM/globals1\nvarying vec3 v_POLY_globals1_position;\n\n\n\n\n#include <packing>\n#include <uv_pars_fragment>\n#include <map_pars_fragment>\n#include <alphamap_pars_fragment>\n#include <clipping_planes_pars_fragment>\n\nstruct SSSModel {\n\tbool isActive;\n\tvec3 color;\n\tfloat thickness;\n\tfloat power;\n\tfloat scale;\n\tfloat distortion;\n\tfloat ambient;\n\tfloat attenuation;\n};\n\nvoid RE_Direct_Scattering(\n\tconst in IncidentLight directLight,\n\tconst in GeometricContext geometry,\n\tconst in SSSModel sssModel,\n\tinout ReflectedLight reflectedLight\n\t){\n\tvec3 scatteringHalf = normalize(directLight.direction + (geometry.normal * sssModel.distortion));\n\tfloat scatteringDot = pow(saturate(dot(geometry.viewDir, -scatteringHalf)), sssModel.power) * sssModel.scale;\n\tvec3 scatteringIllu = (scatteringDot + sssModel.ambient) * (sssModel.color * (1.0-sssModel.thickness));\n\treflectedLight.directDiffuse += scatteringIllu * sssModel.attenuation * directLight.color;\n}\n\nvoid main() {\n\n\t#include <clipping_planes_fragment>\n\n\tvec4 diffuseColor = vec4( 1.0 );\n\n\n\n\t// /MAT/meshStandardBuilder_ROOM/constant2\n\tfloat v_POLY_constant2_val = 5.4;\n\t\n\t// /MAT/meshStandardBuilder_ROOM/constant1\n\tfloat v_POLY_constant1_val = 0.57;\n\t\n\t// /MAT/meshStandardBuilder_ROOM/vec3ToFloat2\n\tfloat v_POLY_vec3ToFloat2_x = v_POLY_globals1_position.x;\n\tfloat v_POLY_vec3ToFloat2_y = v_POLY_globals1_position.y;\n\t\n\t// /MAT/meshStandardBuilder_ROOM/vec3ToFloat1\n\tfloat v_POLY_vec3ToFloat1_x = v_POLY_globals1_position.x;\n\tfloat v_POLY_vec3ToFloat1_z = v_POLY_globals1_position.z;\n\t\n\t// /MAT/meshStandardBuilder_ROOM/negate1\n\tfloat v_POLY_negate1_val = -1.0 * v_POLY_constant2_val;\n\t\n\t// /MAT/meshStandardBuilder_ROOM/compare1\n\tbool v_POLY_compare1_val = (v_POLY_vec3ToFloat2_y < v_POLY_constant2_val);\n\t\n\t// /MAT/meshStandardBuilder_ROOM/multAdd3\n\tfloat v_POLY_multAdd3_val = (v_POLY_constant1_val*(v_POLY_vec3ToFloat2_x + 0.0)) + 0.0;\n\t\n\t// /MAT/meshStandardBuilder_ROOM/multAdd2\n\tfloat v_POLY_multAdd2_val = (1.0*(v_POLY_vec3ToFloat2_y + v_POLY_negate1_val)) + 0.0;\n\t\n\t// /MAT/meshStandardBuilder_ROOM/multAdd1\n\tfloat v_POLY_multAdd1_val = (v_POLY_constant1_val*(v_POLY_vec3ToFloat1_x + 0.0)) + 0.0;\n\t\n\t// /MAT/meshStandardBuilder_ROOM/floatToVec2_2\n\tvec2 v_POLY_floatToVec2_2_vec2 = vec2(v_POLY_multAdd3_val, v_POLY_multAdd2_val);\n\t\n\t// /MAT/meshStandardBuilder_ROOM/floatToVec2_1\n\tvec2 v_POLY_floatToVec2_1_vec2 = vec2(v_POLY_multAdd1_val, v_POLY_vec3ToFloat1_z);\n\t\n\t// /MAT/meshStandardBuilder_ROOM/twoWaySwitch1\n\tvec2 v_POLY_twoWaySwitch1_val;\n\tif(v_POLY_compare1_val){\n\tv_POLY_twoWaySwitch1_val = v_POLY_floatToVec2_1_vec2;\n\t} else {\n\tv_POLY_twoWaySwitch1_val = v_POLY_floatToVec2_2_vec2;\n\t}\n\t\n\t// /MAT/meshStandardBuilder_ROOM/disk1\n\tfloat v_POLY_disk1_float = disk2d(v_POLY_twoWaySwitch1_val, vec2(0.0, 0.0), 1.8, 1.0);\n\t\n\t// /MAT/meshStandardBuilder_ROOM/easing1\n\tfloat v_POLY_easing1_out = quadraticInOut(v_POLY_disk1_float);\n\t\n\t// /MAT/meshStandardBuilder_ROOM/output1\n\tdiffuseColor.a = v_POLY_easing1_out;\n\tfloat POLY_metalness = 1.0;\n\tfloat POLY_roughness = 1.0;\n\tvec3 POLY_emissive = vec3(1.0, 1.0, 1.0);\n\tSSSModel POLY_SSSModel = SSSModel(/*isActive*/false,/*color*/vec3(1.0, 1.0, 1.0), /*thickness*/0.1, /*power*/2.0, /*scale*/16.0, /*distortion*/0.1,/*ambient*/0.4,/*attenuation*/0.8 );\n\n\n\n\n\t#include <map_fragment>\n\t#include <alphamap_fragment>\n\t#include <alphatest_fragment>\n\n\tfloat dist = length( vWorldPosition - referencePosition );\n\tdist = ( dist - nearDistance ) / ( farDistance - nearDistance );\n\tdist = saturate( dist ); // clamp to [ 0, 1 ]\n\n\tgl_FragColor = packDepthToRGBA( dist );\n\n}\n",
+				"shadowSide": null,
+				"lights": false
+			},
+			"customDepthMaterial": {
+				"metadata": {
+					"version": 4.5,
+					"type": "Material",
+					"generator": "Material.toJSON"
+				},
+				"uuid": "/MAT/meshStandardBuilder_ROOM-customDepthMaterial",
+				"type": "ShaderMaterial",
+				"name": "customDepthMaterial",
+				"side": 1,
+				"depthFunc": 3,
+				"depthTest": true,
+				"depthWrite": true,
+				"colorWrite": true,
+				"stencilWrite": false,
+				"stencilWriteMask": 255,
+				"stencilFunc": 519,
+				"stencilRef": 0,
+				"stencilFuncMask": 255,
+				"stencilFail": 7680,
+				"stencilZFail": 7680,
+				"stencilZPass": 7680,
+				"glslVersion": null,
+				"uniforms": {
+					"diffuse": {
+						"type": "c",
+						"value": 15658734
+					},
+					"opacity": {
+						"value": 1
+					},
+					"map": {
+						"value": null
+					},
+					"uvTransform": {
+						"type": "m3",
+						"value": [
+							1,
+							0,
+							0,
+							0,
+							1,
+							0,
+							0,
+							0,
+							1
+						]
+					},
+					"uv2Transform": {
+						"type": "m3",
+						"value": [
+							1,
+							0,
+							0,
+							0,
+							1,
+							0,
+							0,
+							0,
+							1
+						]
+					},
+					"alphaMap": {
+						"value": null
+					},
+					"displacementMap": {
+						"value": null
+					},
+					"displacementScale": {
+						"value": 1
+					},
+					"displacementBias": {
+						"value": 0
+					}
+				},
+				"defines": {
+					"DEPTH_PACKING": 3201
+				},
+				"vertexShader": "\n#include <common>\n\n\n\n// /MAT/meshStandardBuilder_ROOM/globals1\nvarying vec3 v_POLY_globals1_position;\n\n\n\n\n#include <uv_pars_vertex>\n#include <displacementmap_pars_vertex>\n#include <morphtarget_pars_vertex>\n#include <skinning_pars_vertex>\n#include <logdepthbuf_pars_vertex>\n#include <clipping_planes_pars_vertex>\n\n// This is used for computing an equivalent of gl_FragCoord.z that is as high precision as possible.\n// Some platforms compute gl_FragCoord at a lower precision which makes the manually computed value better for\n// depth-based postprocessing effects. Reproduced on iPad with A10 processor / iPadOS 13.3.1.\nvarying vec2 vHighPrecisionZW;\n\nvoid main() {\n\n\t#include <uv_vertex>\n\n\t#include <skinbase_vertex>\n\n\t#ifdef USE_DISPLACEMENTMAP\n\n// removed:\n//\t\t#include <beginnormal_vertex>\n\t\t#include <morphnormal_vertex>\n\t\t#include <skinnormal_vertex>\n\n\t#endif\n\n// removed:\n//\t#include <begin_vertex>\n\n\n\n\t// /MAT/meshStandardBuilder_ROOM/globals1\n\tv_POLY_globals1_position = vec3(position);\n\t\n\t// /MAT/meshStandardBuilder_ROOM/output1\n\tvec3 transformed = position;\n\tvec3 objectNormal = normal;\n\t#ifdef USE_TANGENT\n\t\tvec3 objectTangent = vec3( tangent.xyz );\n\t#endif\n\n\n\n\t#include <morphtarget_vertex>\n\t#include <skinning_vertex>\n\t#include <displacementmap_vertex>\n\t#include <project_vertex>\n\t#include <logdepthbuf_vertex>\n\t#include <clipping_planes_vertex>\n\n\tvHighPrecisionZW = gl_Position.zw;\n\n}\n",
+				"fragmentShader": "\n#if DEPTH_PACKING == 3200\n\n\tuniform float opacity;\n\n#endif\n\n#include <common>\n\n\n\n// /MAT/meshStandardBuilder_ROOM/disk1\nfloat disk_feather(float dist, float radius, float feather){\n\tif(feather <= 0.0){\n\t\tif(dist < radius){return 1.0;}else{return 0.0;}\n\t} else {\n\t\tfloat half_feather = feather * 0.5;\n\t\tif(dist < (radius - half_feather)){\n\t\t\treturn 1.0;\n\t\t} else {\n\t\t\tif(dist > (radius + half_feather)){\n\t\t\t\treturn 0.0;\n\t\t\t} else {\n\t\t\t\tfloat feather_start = (radius - half_feather);\n\t\t\t\tfloat blend = 1.0 - (dist - feather_start) / feather;\n\t\t\t\treturn blend;\n\t\t\t}\n\t\t}\n\t}\n}\n\nfloat disk2d(vec2 pos, vec2 center, float radius, float feather){\n\tfloat dist = distance(pos, center);\n\treturn disk_feather(dist, radius, feather);\n}\n\n// function could be called sphere, but is an overload of disk, and is the same\nfloat disk3d(vec3 pos, vec3 center, float radius, float feather){\n\tfloat dist = distance(pos, center);\n\treturn disk_feather(dist, radius, feather);\n}\n\n// /MAT/meshStandardBuilder_ROOM/easing1\nfloat quadraticInOut(float t) {\n  float p = 2.0 * t * t;\n  return t < 0.5 ? p : -p + (4.0 * t) - 1.0;\n}\n\n\n\n\n\n\n\n\n\n// /MAT/meshStandardBuilder_ROOM/globals1\nvarying vec3 v_POLY_globals1_position;\n\n\n\n\n#include <packing>\n#include <uv_pars_fragment>\n#include <map_pars_fragment>\n#include <alphamap_pars_fragment>\n#include <logdepthbuf_pars_fragment>\n#include <clipping_planes_pars_fragment>\n\nvarying vec2 vHighPrecisionZW;\n\nstruct SSSModel {\n\tbool isActive;\n\tvec3 color;\n\tfloat thickness;\n\tfloat power;\n\tfloat scale;\n\tfloat distortion;\n\tfloat ambient;\n\tfloat attenuation;\n};\n\nvoid RE_Direct_Scattering(\n\tconst in IncidentLight directLight,\n\tconst in GeometricContext geometry,\n\tconst in SSSModel sssModel,\n\tinout ReflectedLight reflectedLight\n\t){\n\tvec3 scatteringHalf = normalize(directLight.direction + (geometry.normal * sssModel.distortion));\n\tfloat scatteringDot = pow(saturate(dot(geometry.viewDir, -scatteringHalf)), sssModel.power) * sssModel.scale;\n\tvec3 scatteringIllu = (scatteringDot + sssModel.ambient) * (sssModel.color * (1.0-sssModel.thickness));\n\treflectedLight.directDiffuse += scatteringIllu * sssModel.attenuation * directLight.color;\n}\n\nvoid main() {\n\n\t#include <clipping_planes_fragment>\n\n\tvec4 diffuseColor = vec4( 1.0 );\n\n\n\n\t// /MAT/meshStandardBuilder_ROOM/constant2\n\tfloat v_POLY_constant2_val = 5.4;\n\t\n\t// /MAT/meshStandardBuilder_ROOM/constant1\n\tfloat v_POLY_constant1_val = 0.57;\n\t\n\t// /MAT/meshStandardBuilder_ROOM/vec3ToFloat2\n\tfloat v_POLY_vec3ToFloat2_x = v_POLY_globals1_position.x;\n\tfloat v_POLY_vec3ToFloat2_y = v_POLY_globals1_position.y;\n\t\n\t// /MAT/meshStandardBuilder_ROOM/vec3ToFloat1\n\tfloat v_POLY_vec3ToFloat1_x = v_POLY_globals1_position.x;\n\tfloat v_POLY_vec3ToFloat1_z = v_POLY_globals1_position.z;\n\t\n\t// /MAT/meshStandardBuilder_ROOM/negate1\n\tfloat v_POLY_negate1_val = -1.0 * v_POLY_constant2_val;\n\t\n\t// /MAT/meshStandardBuilder_ROOM/compare1\n\tbool v_POLY_compare1_val = (v_POLY_vec3ToFloat2_y < v_POLY_constant2_val);\n\t\n\t// /MAT/meshStandardBuilder_ROOM/multAdd3\n\tfloat v_POLY_multAdd3_val = (v_POLY_constant1_val*(v_POLY_vec3ToFloat2_x + 0.0)) + 0.0;\n\t\n\t// /MAT/meshStandardBuilder_ROOM/multAdd2\n\tfloat v_POLY_multAdd2_val = (1.0*(v_POLY_vec3ToFloat2_y + v_POLY_negate1_val)) + 0.0;\n\t\n\t// /MAT/meshStandardBuilder_ROOM/multAdd1\n\tfloat v_POLY_multAdd1_val = (v_POLY_constant1_val*(v_POLY_vec3ToFloat1_x + 0.0)) + 0.0;\n\t\n\t// /MAT/meshStandardBuilder_ROOM/floatToVec2_2\n\tvec2 v_POLY_floatToVec2_2_vec2 = vec2(v_POLY_multAdd3_val, v_POLY_multAdd2_val);\n\t\n\t// /MAT/meshStandardBuilder_ROOM/floatToVec2_1\n\tvec2 v_POLY_floatToVec2_1_vec2 = vec2(v_POLY_multAdd1_val, v_POLY_vec3ToFloat1_z);\n\t\n\t// /MAT/meshStandardBuilder_ROOM/twoWaySwitch1\n\tvec2 v_POLY_twoWaySwitch1_val;\n\tif(v_POLY_compare1_val){\n\tv_POLY_twoWaySwitch1_val = v_POLY_floatToVec2_1_vec2;\n\t} else {\n\tv_POLY_twoWaySwitch1_val = v_POLY_floatToVec2_2_vec2;\n\t}\n\t\n\t// /MAT/meshStandardBuilder_ROOM/disk1\n\tfloat v_POLY_disk1_float = disk2d(v_POLY_twoWaySwitch1_val, vec2(0.0, 0.0), 1.8, 1.0);\n\t\n\t// /MAT/meshStandardBuilder_ROOM/easing1\n\tfloat v_POLY_easing1_out = quadraticInOut(v_POLY_disk1_float);\n\t\n\t// /MAT/meshStandardBuilder_ROOM/output1\n\tdiffuseColor.a = v_POLY_easing1_out;\n\tfloat POLY_metalness = 1.0;\n\tfloat POLY_roughness = 1.0;\n\tvec3 POLY_emissive = vec3(1.0, 1.0, 1.0);\n\tSSSModel POLY_SSSModel = SSSModel(/*isActive*/false,/*color*/vec3(1.0, 1.0, 1.0), /*thickness*/0.1, /*power*/2.0, /*scale*/16.0, /*distortion*/0.1,/*ambient*/0.4,/*attenuation*/0.8 );\n\n\n\n\n\t#if DEPTH_PACKING == 3200\n\n\t\tdiffuseColor.a = opacity;\n\n\t#endif\n\n\t#include <map_fragment>\n\t#include <alphamap_fragment>\n\t#include <alphatest_fragment>\n\n\t#include <logdepthbuf_fragment>\n\n\t// Higher precision equivalent of gl_FragCoord.z. This assumes depthRange has been left to its default values.\n\tfloat fragCoordZ = 0.5 * vHighPrecisionZW[0] / vHighPrecisionZW[1] + 0.5;\n\n\t#if DEPTH_PACKING == 3200\n\n\t\tgl_FragColor = vec4( vec3( 1.0 - fragCoordZ ), opacity );\n\n\t#elif DEPTH_PACKING == 3201\n\n\t\tgl_FragColor = packDepthToRGBA( fragCoordZ );\n\n\t#endif\n\n}\n",
+				"shadowSide": null,
+				"lights": false
+			},
+			"customDepthDOFMaterial": {
+				"metadata": {
+					"version": 4.5,
+					"type": "Material",
+					"generator": "Material.toJSON"
+				},
+				"uuid": "/MAT/meshStandardBuilder_ROOM-customDepthDOFMaterial",
+				"type": "ShaderMaterial",
+				"name": "customDepthDOFMaterial",
+				"depthFunc": 3,
+				"depthTest": true,
+				"depthWrite": true,
+				"colorWrite": true,
+				"stencilWrite": false,
+				"stencilWriteMask": 255,
+				"stencilFunc": 519,
+				"stencilRef": 0,
+				"stencilFuncMask": 255,
+				"stencilFail": 7680,
+				"stencilZFail": 7680,
+				"stencilZPass": 7680,
+				"glslVersion": null,
+				"uniforms": {
+					"mNear": {
+						"value": 0
+					},
+					"mFar": {
+						"value": 10
+					}
+				},
+				"vertexShader": "#include <common>\n\nvarying float vViewZDepth;\n\n// INSERT DEFINES\n\n\n\n// /MAT/meshStandardBuilder_ROOM/globals1\nvarying vec3 v_POLY_globals1_position;\n\n\n\n\n\n\n\nvoid main() {\n\n\t// INSERT BODY\n\n\n\n\t// /MAT/meshStandardBuilder_ROOM/globals1\n\tv_POLY_globals1_position = vec3(position);\n\t\n\t// /MAT/meshStandardBuilder_ROOM/output1\n\tvec3 transformed = position;\n\tvec3 objectNormal = normal;\n\t#ifdef USE_TANGENT\n\t\tvec3 objectTangent = vec3( tangent.xyz );\n\t#endif\n\n\n\n\n\n\t#include <project_vertex>\n\n\tvViewZDepth = - mvPosition.z;\n}",
+				"fragmentShader": "uniform float mNear;\nuniform float mFar;\n\nvarying float vViewZDepth;\n\nstruct SSSModel {\n\tbool isActive;\n\tvec3 color;\n\tfloat thickness;\n\tfloat power;\n\tfloat scale;\n\tfloat distortion;\n\tfloat ambient;\n\tfloat attenuation;\n};\n\nvoid RE_Direct_Scattering(\n\tconst in IncidentLight directLight,\n\tconst in GeometricContext geometry,\n\tconst in SSSModel sssModel,\n\tinout ReflectedLight reflectedLight\n\t){\n\tvec3 scatteringHalf = normalize(directLight.direction + (geometry.normal * sssModel.distortion));\n\tfloat scatteringDot = pow(saturate(dot(geometry.viewDir, -scatteringHalf)), sssModel.power) * sssModel.scale;\n\tvec3 scatteringIllu = (scatteringDot + sssModel.ambient) * (sssModel.color * (1.0-sssModel.thickness));\n\treflectedLight.directDiffuse += scatteringIllu * sssModel.attenuation * directLight.color;\n}\n\nvoid main() {\n\n\tfloat color = 1.0 - smoothstep( mNear, mFar, vViewZDepth );\n\tgl_FragColor = vec4( vec3( color ), 1.0 );\n\n}\n",
+				"shadowSide": null,
+				"lights": false
+			}
+		}
+	}
+}

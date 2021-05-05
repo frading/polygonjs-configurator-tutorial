@@ -1,18 +1,28 @@
 {
 	"nodes": {
-		"hemisphereLight1": {
+		"perspectiveCamera1": {
 			"pos": [
-				150,
+				-200,
 				100
-			]
+			],
+			"nodes": {
+				"events1": {
+					"pos": [
+						-200,
+						50
+					],
+					"nodes": {
+						"cameraOrbitControls1": {
+							"pos": [
+								150,
+								50
+							]
+						}
+					}
+				}
+			}
 		},
-		"spotLight1": {
-			"pos": [
-				150,
-				200
-			]
-		},
-		"geo1": {
+		"shelf": {
 			"pos": [
 				-50,
 				-150
@@ -83,25 +93,221 @@
 						-900,
 						200
 					]
+				},
+				"material1": {
+					"pos": [
+						-650,
+						550
+					]
 				}
 			}
 		},
-		"perspectiveCamera1": {
+		"room": {
 			"pos": [
-				-200,
-				100
+				-50,
+				-250
 			],
 			"nodes": {
-				"events1": {
+				"plane1": {
 					"pos": [
-						-200,
+						-50,
 						50
+					]
+				},
+				"transform1": {
+					"pos": [
+						-50,
+						200
+					]
+				},
+				"plane2": {
+					"pos": [
+						250,
+						50
+					]
+				},
+				"transform2": {
+					"pos": [
+						250,
+						200
+					]
+				},
+				"merge1": {
+					"pos": [
+						50,
+						350
+					]
+				},
+				"material1": {
+					"pos": [
+						50,
+						450
+					]
+				}
+			}
+		},
+		"directionalLight1": {
+			"pos": [
+				200,
+				200
+			]
+		},
+		"polarTransform1": {
+			"pos": [
+				200,
+				50
+			]
+		},
+		"directionalLight2": {
+			"pos": [
+				400,
+				200
+			]
+		},
+		"polarTransform2": {
+			"pos": [
+				400,
+				50
+			]
+		},
+		"MAT": {
+			"pos": [
+				-200,
+				200
+			],
+			"nodes": {
+				"meshStandard_ROOM": {
+					"pos": [
+						-150,
+						100
+					]
+				},
+				"meshStandard_SHELF": {
+					"pos": [
+						-150,
+						200
+					]
+				},
+				"meshStandardBuilder_ROOM": {
+					"pos": [
+						150,
+						100
 					],
 					"nodes": {
-						"cameraOrbitControls1": {
+						"globals1": {
 							"pos": [
-								150,
+								-1200,
+								0
+							]
+						},
+						"output1": {
+							"pos": [
+								550,
+								-250
+							]
+						},
+						"vec3ToFloat1": {
+							"pos": [
+								-700,
 								50
+							]
+						},
+						"disk1": {
+							"pos": [
+								200,
+								-100
+							]
+						},
+						"floatToVec2_1": {
+							"pos": [
+								-350,
+								150
+							]
+						},
+						"multAdd1": {
+							"pos": [
+								-450,
+								0
+							]
+						},
+						"easing1": {
+							"pos": [
+								350,
+								-100
+							]
+						},
+						"vec3ToFloat2": {
+							"pos": [
+								-750,
+								-300
+							]
+						},
+						"floatToVec2_2": {
+							"pos": [
+								-400,
+								-300
+							]
+						},
+						"multAdd2": {
+							"pos": [
+								-550,
+								-200
+							]
+						},
+						"multAdd3": {
+							"pos": [
+								-550,
+								-350
+							]
+						},
+						"constant1": {
+							"pos": [
+								-900,
+								-150
+							]
+						},
+						"constant2": {
+							"pos": [
+								-800,
+								-50
+							]
+						},
+						"negate1": {
+							"pos": [
+								-650,
+								-150
+							]
+						},
+						"compare1": {
+							"pos": [
+								-200,
+								-200
+							]
+						},
+						"twoWaySwitch1": {
+							"pos": [
+								-50,
+								-200
+							]
+						}
+					}
+				},
+				"meshStandardBuilder_SHELF": {
+					"pos": [
+						150,
+						200
+					],
+					"nodes": {
+						"globals1": {
+							"pos": [
+								-200,
+								0
+							]
+						},
+						"output1": {
+							"pos": [
+								200,
+								0
 							]
 						}
 					}

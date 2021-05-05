@@ -82,10 +82,7 @@
 			"inputs": [
 				"merge2",
 				"copy1"
-			],
-			"flags": {
-				"display": true
-			}
+			]
 		},
 		"box3": {
 			"type": "box",
@@ -121,12 +118,24 @@
 				"transform3",
 				"transform2"
 			]
+		},
+		"material1": {
+			"type": "material",
+			"params": {
+				"material": "../../MAT/meshStandardBuilder_SHELF"
+			},
+			"inputs": [
+				"merge1"
+			],
+			"flags": {
+				"display": true
+			}
 		}
 	},
 	"flags": {
 		"display": true
 	},
 	"selection": [
-		"line1"
+		"material1"
 	]
 }
