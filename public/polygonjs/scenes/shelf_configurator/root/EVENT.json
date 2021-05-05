@@ -1,0 +1,97 @@
+{
+	"type": "eventsNetwork",
+	"nodes": {
+		"pointer1": {
+			"type": "pointer",
+			"params": {
+				"pointermove": 1
+			}
+		},
+		"viewer1": {
+			"type": "viewer",
+			"inputs": [
+				{
+					"index": 0,
+					"node": "raycast_POINTERMOVE",
+					"output": "hit"
+				},
+				{
+					"index": 1,
+					"node": "raycast_POINTERMOVE",
+					"output": "miss"
+				}
+			]
+		},
+		"raycast_POINTERMOVE": {
+			"type": "raycast",
+			"params": {
+				"mouse": [
+					0.994412135852426,
+					-0.24879696451928401
+				],
+				"objectMask": "*materialSamplesRaycast*",
+				"position": [
+					-1.4539438611577884,
+					2.9940411925245396,
+					2.121240235954591
+				]
+			},
+			"inputs": [
+				{
+					"index": 0,
+					"node": "pointer1",
+					"output": "pointermove"
+				},
+				{
+					"index": 1,
+					"node": "pointer1",
+					"output": "pointermove"
+				},
+				{
+					"index": 2,
+					"node": "button1",
+					"output": "out"
+				}
+			]
+		},
+		"raycast_CLICK": {
+			"type": "raycast",
+			"params": {
+				"mouse": [
+					0.994412135852426,
+					-0.24879696451928401
+				],
+				"objectMask": "*materialSamplesRaycast*",
+				"position": [
+					-1.5154936443281302,
+					2.933293341211652,
+					2.4050588875963372
+				],
+				"geoAttribute": 1
+			},
+			"inputs": [
+				{
+					"index": 0,
+					"node": "pointer1",
+					"output": "pointerdown"
+				},
+				{
+					"index": 1,
+					"node": "pointer1",
+					"output": "pointermove"
+				},
+				{
+					"index": 2,
+					"node": "button1",
+					"output": "out"
+				}
+			]
+		},
+		"button1": {
+			"type": "button"
+		}
+	},
+	"selection": [
+		"raycast_CLICK"
+	]
+}

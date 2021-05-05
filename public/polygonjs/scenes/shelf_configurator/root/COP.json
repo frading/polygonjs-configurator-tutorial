@@ -1,0 +1,14 @@
+{
+	"type": "copNetwork",
+	"nodes": {
+		"image1": {
+			"type": "image",
+			"params": {
+				"url": "public/Wood048_2K_Color.jpg?t=`js('Date.now()')`"
+			}
+		}
+	},
+	"selection": [
+		"image1"
+	]
+}

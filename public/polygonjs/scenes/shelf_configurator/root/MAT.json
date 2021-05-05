@@ -1,19 +1,4 @@
 {
 	"type": "materialsNetwork",
-	"nodes": {
-		"meshStandard_ROOM": {
-			"type": "meshStandard",
-			"params": {
-				"metalness": 0,
-				"roughness": 1
-			}
-		},
-		"meshStandard_SHELF": {
-			"type": "meshStandard",
-			"params": {
-				"metalness": 0,
-				"roughness": 1
-			}
-		}
-	}
+	"nodes": {}
 }

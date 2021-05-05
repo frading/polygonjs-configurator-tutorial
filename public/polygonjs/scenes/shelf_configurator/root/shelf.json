@@ -122,10 +122,39 @@
 		"material1": {
 			"type": "material",
 			"params": {
-				"material": "../../MAT/meshStandardBuilder_SHELF"
+				"material": "../../MAT/meshStandardBuilder_SHELF0"
 			},
 			"inputs": [
 				"merge1"
+			]
+		},
+		"material2": {
+			"type": "material",
+			"params": {
+				"material": "../../MAT/meshStandardBuilder_SHELF1"
+			},
+			"inputs": [
+				"merge1"
+			]
+		},
+		"material3": {
+			"type": "material",
+			"params": {
+				"material": "../../MAT/meshStandardBuilder_SHELF2"
+			},
+			"inputs": [
+				"merge1"
+			]
+		},
+		"switch1": {
+			"type": "switch",
+			"params": {
+				"input": "ch(\"../../EVENT/raycast_CLICK/geoAttributeValue1\")"
+			},
+			"inputs": [
+				"material1",
+				"material2",
+				"material3"
 			],
 			"flags": {
 				"display": true
@@ -136,6 +165,6 @@
 		"display": true
 	},
 	"selection": [
-		"material1"
+		"switch1"
 	]
 }

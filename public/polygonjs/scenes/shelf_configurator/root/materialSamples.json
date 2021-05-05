@@ -1,0 +1,176 @@
+{
+	"type": "geo",
+	"nodes": {
+		"sphere1": {
+			"type": "sphere",
+			"params": {
+				"radius": 0.25
+			}
+		},
+		"transform1": {
+			"type": "transform",
+			"inputs": [
+				"sphere1"
+			],
+			"flags": {
+				"bypass": true
+			}
+		},
+		"transform2": {
+			"type": "transform",
+			"params": {
+				"applyOn": 1,
+				"t": [
+					0,
+					0.72,
+					0
+				]
+			},
+			"inputs": [
+				"transform1"
+			]
+		},
+		"merge1": {
+			"type": "merge",
+			"inputs": [
+				"attribCreate1",
+				"attribCreate2",
+				"attribCreate3"
+			]
+		},
+		"transform3": {
+			"type": "transform",
+			"params": {
+				"applyOn": 1,
+				"t": [
+					0,
+					"-ch(\"../transform2/ty\")",
+					0
+				]
+			},
+			"inputs": [
+				"transform1"
+			]
+		},
+		"transform4": {
+			"type": "transform",
+			"params": {
+				"t": [
+					-1.5,
+					0,
+					-3.1
+				]
+			},
+			"inputs": [
+				"merge2"
+			],
+			"flags": {
+				"display": true
+			}
+		},
+		"objectProperties1": {
+			"type": "objectProperties",
+			"params": {
+				"tname": 1,
+				"name": "materialSamplesRaycast",
+				"tcastShadow": 1,
+				"castShadow": 0,
+				"treceiveShadow": 1,
+				"receiveShadow": 0
+			},
+			"inputs": [
+				"merge1"
+			]
+		},
+		"material1": {
+			"type": "material",
+			"params": {
+				"material": "../../MAT/meshStandardBuilder_SHELF0"
+			},
+			"inputs": [
+				"transform2"
+			]
+		},
+		"material2": {
+			"type": "material",
+			"params": {
+				"material": "../../MAT/meshStandardBuilder_SHELF1"
+			},
+			"inputs": [
+				"transform1"
+			]
+		},
+		"material3": {
+			"type": "material",
+			"params": {
+				"material": "../../MAT/meshStandardBuilder_SHELF2"
+			},
+			"inputs": [
+				"transform3"
+			]
+		},
+		"attribCreate1": {
+			"type": "attribCreate",
+			"params": {
+				"name": "id"
+			},
+			"inputs": [
+				"material1"
+			]
+		},
+		"attribCreate2": {
+			"type": "attribCreate",
+			"params": {
+				"name": "id",
+				"value1": 1
+			},
+			"inputs": [
+				"material2"
+			]
+		},
+		"attribCreate3": {
+			"type": "attribCreate",
+			"params": {
+				"name": "id",
+				"value1": 2
+			},
+			"inputs": [
+				"material3"
+			]
+		},
+		"transform5": {
+			"type": "transform",
+			"params": {
+				"scale": 1.1400000000000001
+			},
+			"inputs": [
+				"merge1"
+			]
+		},
+		"material4": {
+			"type": "material",
+			"params": {
+				"material": "../../MAT/meshBasicBuilder_MAT_SELECTION_HIGHLIGHT"
+			},
+			"inputs": [
+				"transform5"
+			]
+		},
+		"merge2": {
+			"type": "merge",
+			"inputs": [
+				"objectProperties1",
+				"material4"
+			]
+		}
+	},
+	"inputs": [
+		"perspectiveCamera1"
+	],
+	"flags": {
+		"display": true
+	},
+	"selection": [
+		"transform5"
+	]
+}

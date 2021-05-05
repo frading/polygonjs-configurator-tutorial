@@ -96,8 +96,26 @@
 				},
 				"material1": {
 					"pos": [
+						-800,
+						600
+					]
+				},
+				"material2": {
+					"pos": [
 						-650,
-						550
+						600
+					]
+				},
+				"material3": {
+					"pos": [
+						-500,
+						600
+					]
+				},
+				"switch1": {
+					"pos": [
+						-650,
+						800
 					]
 				}
 			}
@@ -176,18 +194,6 @@
 				200
 			],
 			"nodes": {
-				"meshStandard_ROOM": {
-					"pos": [
-						-150,
-						100
-					]
-				},
-				"meshStandard_SHELF": {
-					"pos": [
-						-150,
-						200
-					]
-				},
 				"meshStandardBuilder_ROOM": {
 					"pos": [
 						150,
@@ -292,7 +298,7 @@
 						}
 					}
 				},
-				"meshStandardBuilder_SHELF": {
+				"meshStandardBuilder_SHELF0": {
 					"pos": [
 						150,
 						200
@@ -311,6 +317,270 @@
 							]
 						}
 					}
+				},
+				"meshStandardBuilder_SHELF1": {
+					"pos": [
+						150,
+						300
+					],
+					"nodes": {
+						"globals1": {
+							"pos": [
+								-200,
+								0
+							]
+						},
+						"output1": {
+							"pos": [
+								200,
+								0
+							]
+						}
+					}
+				},
+				"meshStandardBuilder_SHELF2": {
+					"pos": [
+						150,
+						400
+					],
+					"nodes": {
+						"globals1": {
+							"pos": [
+								-200,
+								0
+							]
+						},
+						"output1": {
+							"pos": [
+								200,
+								0
+							]
+						},
+						"param1": {
+							"pos": [
+								-50,
+								0
+							]
+						}
+					}
+				},
+				"meshBasicBuilder_MAT_SELECTION_HIGHLIGHT": {
+					"pos": [
+						150,
+						500
+					],
+					"nodes": {
+						"globals1": {
+							"pos": [
+								-350,
+								0
+							]
+						},
+						"output1": {
+							"pos": [
+								300,
+								0
+							]
+						},
+						"param1": {
+							"pos": [
+								0,
+								-100
+							]
+						},
+						"param_selectedId": {
+							"pos": [
+								-200,
+								200
+							]
+						},
+						"attribute1": {
+							"pos": [
+								-200,
+								100
+							]
+						},
+						"round1": {
+							"pos": [
+								-100,
+								100
+							]
+						},
+						"round2": {
+							"pos": [
+								-100,
+								200
+							]
+						},
+						"compare1": {
+							"pos": [
+								0,
+								150
+							]
+						},
+						"twoWaySwitch1": {
+							"pos": [
+								100,
+								150
+							]
+						}
+					}
+				}
+			}
+		},
+		"COP": {
+			"pos": [
+				-200,
+				300
+			],
+			"nodes": {
+				"image1": {
+					"pos": [
+						-200,
+						200
+					]
+				}
+			}
+		},
+		"materialSamples": {
+			"pos": [
+				-50,
+				200
+			],
+			"nodes": {
+				"sphere1": {
+					"pos": [
+						-100,
+						0
+					]
+				},
+				"transform1": {
+					"pos": [
+						-100,
+						150
+					]
+				},
+				"transform2": {
+					"pos": [
+						-300,
+						300
+					]
+				},
+				"merge1": {
+					"pos": [
+						-100,
+						600
+					]
+				},
+				"transform3": {
+					"pos": [
+						100,
+						300
+					]
+				},
+				"transform4": {
+					"pos": [
+						-50,
+						1150
+					]
+				},
+				"objectProperties1": {
+					"pos": [
+						-100,
+						800
+					]
+				},
+				"material1": {
+					"pos": [
+						-300,
+						400
+					]
+				},
+				"material2": {
+					"pos": [
+						-100,
+						350
+					]
+				},
+				"material3": {
+					"pos": [
+						100,
+						400
+					]
+				},
+				"attribCreate1": {
+					"pos": [
+						-300,
+						500
+					]
+				},
+				"attribCreate2": {
+					"pos": [
+						-100,
+						450
+					]
+				},
+				"attribCreate3": {
+					"pos": [
+						100,
+						500
+					]
+				},
+				"transform5": {
+					"pos": [
+						100,
+						800
+					]
+				},
+				"material4": {
+					"pos": [
+						100,
+						900
+					]
+				},
+				"merge2": {
+					"pos": [
+						-50,
+						1050
+					]
+				}
+			}
+		},
+		"EVENT": {
+			"pos": [
+				-200,
+				400
+			],
+			"nodes": {
+				"pointer1": {
+					"pos": [
+						-350,
+						250
+					]
+				},
+				"viewer1": {
+					"pos": [
+						0,
+						250
+					]
+				},
+				"raycast_POINTERMOVE": {
+					"pos": [
+						-150,
+						250
+					]
+				},
+				"raycast_CLICK": {
+					"pos": [
+						-150,
+						400
+					]
+				},
+				"button1": {
+					"pos": [
+						-350,
+						450
+					]
 				}
 			}
 		}
