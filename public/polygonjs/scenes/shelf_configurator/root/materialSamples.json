@@ -63,19 +63,14 @@
 			},
 			"inputs": [
 				"merge2"
-			],
-			"flags": {
-				"display": true
-			}
+			]
 		},
 		"objectProperties1": {
 			"type": "objectProperties",
 			"params": {
 				"tname": 1,
 				"name": "materialSamplesRaycast",
-				"tcastShadow": 1,
 				"castShadow": 0,
-				"treceiveShadow": 1,
 				"receiveShadow": 0
 			},
 			"inputs": [
@@ -162,6 +157,22 @@
 				"objectProperties1",
 				"material4"
 			]
+		},
+		"objectProperties2": {
+			"type": "objectProperties",
+			"params": {
+				"name": "materialSamplesRaycast",
+				"tcastShadow": true,
+				"castShadow": false,
+				"treceiveShadow": true,
+				"receiveShadow": false
+			},
+			"inputs": [
+				"transform4"
+			],
+			"flags": {
+				"display": true
+			}
 		}
 	},
 	"inputs": [
@@ -171,6 +182,6 @@
 		"display": true
 	},
 	"selection": [
-		"transform5"
+		"objectProperties2"
 	]
 }

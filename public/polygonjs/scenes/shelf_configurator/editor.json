@@ -18,7 +18,7 @@
 				],
 				"current_panel_index": 0,
 				"panel_data": {
-					"active_folder": null
+					"active_folder": 154
 				}
 			},
 			"split_mode": "vertical"
@@ -33,10 +33,10 @@
 			"panel_data": {
 				"camera": {
 					"position": {
-						"x": 186.27494397655968,
-						"y": -479.42470110499727
+						"x": -28.03494580078127,
+						"y": -121.3398525695801
 					},
-					"zoom": 1.24678002230588
+					"zoom": 0.6858710562414267
 				},
 				"history": {
 					"2": {
@@ -59,6 +59,13 @@
 							"y": -720.4453475646972
 						},
 						"zoom": 0.6858710562414267
+					},
+					"233": {
+						"position": {
+							"x": 21.00676721191403,
+							"y": -1065.0634788208006
+						},
+						"zoom": 0.5555555555555557
 					},
 					"259": {
 						"position": {
@@ -128,6 +135,6 @@
 		},
 		"split_mode": "horizontal"
 	},
-	"current_node": "/EVENT",
+	"current_node": "/perspectiveCamera1/events1",
 	"fullscreen_panel_id": null
 }

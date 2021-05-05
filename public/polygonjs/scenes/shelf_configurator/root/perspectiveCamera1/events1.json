@@ -4,15 +4,23 @@
 		"cameraOrbitControls1": {
 			"type": "cameraOrbitControls",
 			"params": {
+				"allowPan": 0,
+				"allowZoom": 0,
+				"limitAzimuthAngle": 1,
+				"azimuthAngleRange": [
+					"-0.45*$PI",
+					"0.45*$PI"
+				],
+				"polarAngleRange": [
+					"$PI * 0.25",
+					"$PI * 0.55"
+				],
 				"target": [
-					-0.01753499395535979,
-					1.818412030372409,
-					-0.12532567694489866
+					0,
+					2.5,
+					0
 				]
 			}
 		}
-	},
-	"selection": [
-		"cameraOrbitControls1"
-	]
+	}
 }

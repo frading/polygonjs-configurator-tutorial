@@ -393,7 +393,7 @@
 					"value": 745993
 				},
 				"v_POLY_param_selectedId_val": {
-					"value": 0
+					"value": 2
 				}
 			},
 			"vertexShader": "\n#include <common>\n\n\n\n// /MAT/meshBasicBuilder_MAT_SELECTION_HIGHLIGHT/attribute1\nvarying float varying_v_POLY_attribute1_val;\n\n// /MAT/meshBasicBuilder_MAT_SELECTION_HIGHLIGHT/attribute1\nattribute float id;\n\n\n\n\n#include <uv_pars_vertex>\n#include <uv2_pars_vertex>\n#include <envmap_pars_vertex>\n#include <color_pars_vertex>\n#include <fog_pars_vertex>\n#include <morphtarget_pars_vertex>\n#include <skinning_pars_vertex>\n#include <logdepthbuf_pars_vertex>\n#include <clipping_planes_pars_vertex>\n\nvoid main() {\n\n\t#include <uv_vertex>\n\t#include <uv2_vertex>\n\t#include <color_vertex>\n\n\n\n\t// /MAT/meshBasicBuilder_MAT_SELECTION_HIGHLIGHT/attribute1\n\tvarying_v_POLY_attribute1_val = float(id);\n\t\n\t// /MAT/meshBasicBuilder_MAT_SELECTION_HIGHLIGHT/output1\n\tvec3 transformed = position;\n\tvec3 objectNormal = normal;\n\t#ifdef USE_TANGENT\n\t\tvec3 objectTangent = vec3( tangent.xyz );\n\t#endif\n\n\n\n\t#include <skinbase_vertex>\n\n\t#ifdef USE_ENVMAP\n\n// removed:\n//\t#include <beginnormal_vertex>\n\t#include <morphnormal_vertex>\n\t#include <skinnormal_vertex>\n\t#include <defaultnormal_vertex>\n\n\t#endif\n\n// removed:\n//\t#include <begin_vertex>\n\t#include <morphtarget_vertex>\n\t#include <skinning_vertex>\n\t#include <project_vertex>\n\t#include <logdepthbuf_vertex>\n\n\t#include <worldpos_vertex>\n\t#include <clipping_planes_vertex>\n\t#include <envmap_vertex>\n\t#include <fog_vertex>\n\n}\n",
@@ -508,7 +508,7 @@
 						"value": 745993
 					},
 					"v_POLY_param_selectedId_val": {
-						"value": 0
+						"value": 2
 					}
 				},
 				"defines": {
@@ -598,7 +598,7 @@
 						"value": 745993
 					},
 					"v_POLY_param_selectedId_val": {
-						"value": 0
+						"value": 2
 					}
 				},
 				"defines": {
@@ -645,7 +645,7 @@
 						"value": 745993
 					},
 					"v_POLY_param_selectedId_val": {
-						"value": 0
+						"value": 2
 					}
 				},
 				"vertexShader": "#include <common>\n\nvarying float vViewZDepth;\n\n// INSERT DEFINES\n\n\n\n// /MAT/meshBasicBuilder_MAT_SELECTION_HIGHLIGHT/attribute1\nvarying float varying_v_POLY_attribute1_val;\n\n// /MAT/meshBasicBuilder_MAT_SELECTION_HIGHLIGHT/attribute1\nattribute float id;\n\n\n\n\n\n\n\nvoid main() {\n\n\t// INSERT BODY\n\n\n\n\t// /MAT/meshBasicBuilder_MAT_SELECTION_HIGHLIGHT/attribute1\n\tvarying_v_POLY_attribute1_val = float(id);\n\t\n\t// /MAT/meshBasicBuilder_MAT_SELECTION_HIGHLIGHT/output1\n\tvec3 transformed = position;\n\tvec3 objectNormal = normal;\n\t#ifdef USE_TANGENT\n\t\tvec3 objectTangent = vec3( tangent.xyz );\n\t#endif\n\n\n\n\n\n\t#include <project_vertex>\n\n\tvViewZDepth = - mvPosition.z;\n}",
