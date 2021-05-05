@@ -392,9 +392,6 @@
 					"type": "c",
 					"value": 745993
 				},
-				"v_POLY_param2_val": {
-					"value": 0
-				},
 				"v_POLY_param_selectedId_val": {
 					"value": 0
 				}
@@ -510,9 +507,6 @@
 						"type": "c",
 						"value": 745993
 					},
-					"v_POLY_param2_val": {
-						"value": 0
-					},
 					"v_POLY_param_selectedId_val": {
 						"value": 0
 					}
@@ -603,9 +597,6 @@
 						"type": "c",
 						"value": 745993
 					},
-					"v_POLY_param2_val": {
-						"value": 0
-					},
 					"v_POLY_param_selectedId_val": {
 						"value": 0
 					}
@@ -652,9 +643,6 @@
 					"v_POLY_param1_val": {
 						"type": "c",
 						"value": 745993
-					},
-					"v_POLY_param2_val": {
-						"value": 0
 					},
 					"v_POLY_param_selectedId_val": {
 						"value": 0

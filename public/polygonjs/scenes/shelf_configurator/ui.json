@@ -1,5 +1,29 @@
 {
 	"nodes": {
+		"directionalLight1": {
+			"pos": [
+				200,
+				200
+			]
+		},
+		"polarTransform1": {
+			"pos": [
+				200,
+				50
+			]
+		},
+		"directionalLight2": {
+			"pos": [
+				400,
+				200
+			]
+		},
+		"polarTransform2": {
+			"pos": [
+				400,
+				50
+			]
+		},
 		"perspectiveCamera1": {
 			"pos": [
 				-200,
@@ -112,7 +136,7 @@
 						600
 					]
 				},
-				"switch1": {
+				"switch_OUT": {
 					"pos": [
 						-650,
 						800
@@ -163,30 +187,6 @@
 					]
 				}
 			}
-		},
-		"directionalLight1": {
-			"pos": [
-				200,
-				200
-			]
-		},
-		"polarTransform1": {
-			"pos": [
-				200,
-				50
-			]
-		},
-		"directionalLight2": {
-			"pos": [
-				400,
-				200
-			]
-		},
-		"polarTransform2": {
-			"pos": [
-				400,
-				50
-			]
 		},
 		"MAT": {
 			"pos": [
@@ -580,6 +580,12 @@
 					"pos": [
 						-350,
 						450
+					]
+				},
+				"nodeCook1": {
+					"pos": [
+						-350,
+						600
 					]
 				}
 			}

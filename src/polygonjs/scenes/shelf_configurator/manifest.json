@@ -1,19 +1,19 @@
 {
-	"properties": "1620231729183",
-	"root": "1620233722005",
+	"properties": "1620250095075",
+	"root": "1620250095075",
 	"nodes": {
-		"perspectiveCamera1": "1620235403803",
-		"perspectiveCamera1/events1": "1620235336282",
-		"shelf": "1620235336282",
+		"perspectiveCamera1": "1620250095075",
+		"perspectiveCamera1/events1": "1620250095075",
+		"shelf": "1620250095075",
 		"room": "1620234080729",
 		"MAT": "1620235336282",
-		"MAT/meshStandardBuilder_ROOM": "1620235403803",
-		"MAT/meshStandardBuilder_SHELF0": "1620235403803",
-		"MAT/meshStandardBuilder_SHELF1": "1620235403803",
-		"MAT/meshStandardBuilder_SHELF2": "1620235403803",
-		"MAT/meshBasicBuilder_MAT_SELECTION_HIGHLIGHT": "1620235336282",
-		"COP": "1620235336282",
+		"MAT/meshStandardBuilder_ROOM": "1620250117776",
+		"MAT/meshStandardBuilder_SHELF0": "1620250117776",
+		"MAT/meshStandardBuilder_SHELF1": "1620250117776",
+		"MAT/meshStandardBuilder_SHELF2": "1620250117776",
+		"MAT/meshBasicBuilder_MAT_SELECTION_HIGHLIGHT": "1620250117776",
+		"COP": "1620250095075",
 		"materialSamples": "1620235336282",
-		"EVENT": "1620235403803"
+		"EVENT": "1620250117776"
 	}
 }

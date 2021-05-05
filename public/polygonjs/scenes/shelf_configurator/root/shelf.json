@@ -146,7 +146,7 @@
 				"merge1"
 			]
 		},
-		"switch1": {
+		"switch_OUT": {
 			"type": "switch",
 			"params": {
 				"input": "ch(\"../../EVENT/raycast_CLICK/geoAttributeValue1\")"
@@ -163,8 +163,5 @@
 	},
 	"flags": {
 		"display": true
-	},
-	"selection": [
-		"switch1"
-	]
+	}
 }

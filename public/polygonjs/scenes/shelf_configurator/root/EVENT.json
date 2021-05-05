@@ -26,8 +26,8 @@
 			"type": "raycast",
 			"params": {
 				"mouse": [
-					0.994412135852426,
-					-0.24879696451928401
+					0.9191918505562677,
+					-0.361322871066557
 				],
 				"objectMask": "*materialSamplesRaycast*",
 				"position": [
@@ -58,8 +58,8 @@
 			"type": "raycast",
 			"params": {
 				"mouse": [
-					0.994412135852426,
-					-0.24879696451928401
+					0.9191918505562677,
+					-0.361322871066557
 				],
 				"objectMask": "*materialSamplesRaycast*",
 				"position": [
@@ -89,9 +89,12 @@
 		},
 		"button1": {
 			"type": "button"
+		},
+		"nodeCook1": {
+			"type": "nodeCook",
+			"params": {
+				"mask": "/COP/image1 /shelf/switch_OUT"
+			}
 		}
-	},
-	"selection": [
-		"raycast_CLICK"
-	]
+	}
 }
