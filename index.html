@@ -12,8 +12,22 @@
 			<div class="row h-100">
 				<div class="col-sm-4">
 					<div id="controls">
-						<label for='geo1-line1-pointsCount'>Number of Shelves</label>
-						<input type='range' id='geo1-line1-pointsCount' name='geo1-line1-pointsCount' min=2 max=8 step=1 value=4></input>
+						<p>
+							<label for='geo1-line1-pointsCount'><strong>Number of Shelves</strong></label>
+							<input type='range' id='geo1-line1-pointsCount' name='geo1-line1-pointsCount' min=2 max=8 step=1 value=3></input>
+							<span id='shelves-count'>3</span>
+						</p>
+						<p>
+							<label><strong>Material</strong></label>
+							<span id='material-name'></span>
+						</p>
+						<p>
+							<label><strong>Price</strong></label>
+							<span id='price'></span>
+						</p>
+						<p>
+							<button id='buy-button' class='btn btn-primary'>Buy</button>
+						</p>
 					</div>
 				</div>
 				<div class="col-sm-8 col-relative">

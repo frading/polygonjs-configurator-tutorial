@@ -14,7 +14,9 @@ export async function setupScene(data) {
 	// from here you can fetch any node with its path
 	// const geo1Node = scene.node('/geo1');
 	document.getElementById('geo1-line1-pointsCount').addEventListener('input', function(event){
-		scene.node('/geo1/line1').p.pointsCount.set(event.target.value);
+		scene.node('/shelf/line1').p.pointsCount.set(parseInt(event.target.value)+1);
+		document.getElementById('shelves-count').innerText = event.target.value;
+		updatePrice()
 	})
 
 	let assetsLoadedCount = 0;
@@ -24,6 +26,44 @@ export async function setupScene(data) {
 		const progress = assetsLoadedCount / maxAssetsCount;
 		updateProgressBar(progress)
 	})
+
+	const MATERIAL_NAMES = [
+		'white',
+		'beige wood',
+		'dark wood'
+	]
+	const PRICE_BY_MATERIAL_NAME = {
+		'white': 10,
+		'beige wood': 20,
+		'dark wood': 40,
+	}
+	
+	const switchNode = scene.node('/shelf/switch_OUT');
+	let materialName;
+	switchNode.onCookEnd('progress-bar',()=>{
+		const index = switchNode.p.input.value;
+		materialName = MATERIAL_NAMES[index]
+		document.getElementById('material-name').innerText = materialName;
+		updatePrice()
+	})
+	function shelvesCount(){
+		return scene.node('/shelf/line1').p.pointsCount.value - 1;
+	}
+	function price(){
+		return 10 * shelvesCount() * PRICE_BY_MATERIAL_NAME[materialName];
+	}
+	function updatePrice(){
+		document.getElementById('price').innerText = `$${price()}`
+	}
+	document.getElementById('buy-button').addEventListener('click', ()=>{
+		const data = {
+			shelvesCount: shelvesCount(),
+			materialName: materialName,
+			price: price()
+		}
+		alert(JSON.stringify(data))
+	})
+
 }
 
 
