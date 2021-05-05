@@ -22,6 +22,11 @@
 		}
 	},
 	"params": {
-		"backgroundMode": 1
+		"backgroundMode": 1,
+		"bgColor": [
+			1,
+			1,
+			1
+		]
 	}
 }

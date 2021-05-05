@@ -1,0 +1,22 @@
+html,
+body,
+#polygonjs-app {
+    margin: 0px;
+    height: 100%;
+    overflow: hidden;
+}
+canvas {
+    display: block;
+    height: 100%;
+    width: 100%;
+}
+canvas.active {
+    cursor: pointer;
+}
+
+#controls {
+    padding: 20px;
+    position:relative;
+    top:50%;
+    transform: translate(0%,-50%);
+}
