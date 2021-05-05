@@ -1,0 +1,63 @@
+{
+	"multiple_panel": {
+		"split_ratio": 0.5,
+		"split_panel0": {
+			"split_ratio": 0.5,
+			"split_panel0": {
+				"panel_types": [
+					"viewer"
+				],
+				"current_panel_index": 0,
+				"panel_data": {
+					"camera": "/perspectiveCamera1"
+				}
+			},
+			"split_panel1": {
+				"panel_types": [
+					"params"
+				],
+				"current_panel_index": 0,
+				"panel_data": {
+					"active_folder": null
+				}
+			},
+			"split_mode": "vertical"
+		},
+		"split_panel1": {
+			"panel_types": [
+				"network",
+				"params",
+				"viewer"
+			],
+			"current_panel_index": 0,
+			"panel_data": {
+				"camera": {
+					"position": {
+						"x": 370.9274791259765,
+						"y": -187.61266680908204
+					},
+					"zoom": 0.6858710562414267
+				},
+				"history": {
+					"24": {
+						"position": {
+							"x": 555.1654991455077,
+							"y": -162.428973815918
+						},
+						"zoom": 0.6858710562414267
+					},
+					"94": {
+						"position": {
+							"x": 370.9274791259765,
+							"y": -187.61266680908204
+						},
+						"zoom": 0.6858710562414267
+					}
+				}
+			}
+		},
+		"split_mode": "horizontal"
+	},
+	"current_node": "/geo1",
+	"fullscreen_panel_id": null
+}

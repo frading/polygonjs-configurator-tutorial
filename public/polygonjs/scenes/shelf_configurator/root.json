@@ -1,0 +1,27 @@
+{
+	"type": "obj",
+	"nodes": {
+		"hemisphereLight1": {
+			"type": "hemisphereLight",
+			"flags": {
+				"display": true
+			}
+		},
+		"spotLight1": {
+			"type": "spotLight",
+			"params": {
+				"t": [
+					2,
+					2,
+					0
+				]
+			},
+			"flags": {
+				"display": true
+			}
+		}
+	},
+	"params": {
+		"backgroundMode": 1
+	}
+}
