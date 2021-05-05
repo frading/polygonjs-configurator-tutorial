@@ -10,7 +10,7 @@
 					0
 				],
 				"shadowSize": [
-					8,
+					6.7,
 					8
 				],
 				"shadowBias": 0
@@ -27,7 +27,7 @@
 			"params": {
 				"center": [
 					0,
-					1.1,
+					4,
 					0
 				],
 				"longitude": 25.2,
@@ -47,7 +47,7 @@
 					0
 				],
 				"shadowSize": [
-					8,
+					4.6,
 					8
 				],
 				"shadowBias": 0
@@ -64,7 +64,7 @@
 			"params": {
 				"center": [
 					0,
-					1.1,
+					4,
 					0
 				],
 				"longitude": 306,
@@ -83,8 +83,5 @@
 			1,
 			1
 		]
-	},
-	"selection": [
-		"perspectiveCamera1"
-	]
+	}
 }

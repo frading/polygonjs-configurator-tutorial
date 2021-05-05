@@ -17,10 +17,13 @@
 				],
 				"target": [
 					0,
-					2.5,
+					3.3,
 					0
 				]
 			}
 		}
-	}
+	},
+	"selection": [
+		"cameraOrbitControls1"
+	]
 }
